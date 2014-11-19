@@ -1,0 +1,922 @@
+-- Logs begin at Tue 2014-11-18 04:29:02 UTC, end at Tue 2014-11-18 05:25:19 UTC. --
+Nov 18 04:36:20 deis-1 systemd[1]: Starting deis-store-monitor...
+Nov 18 04:36:20 deis-1 sh[1376]: Unable to find image 'ubuntu-debootstrap:14.04' locally
+Nov 18 04:36:22 deis-1 sh[1376]: ubuntu-debootstrap:14.04: The image you are pulling has been verified
+Nov 18 04:44:09 deis-1 sh[1376]: Status: Downloaded newer image for ubuntu-debootstrap:14.04
+Nov 18 04:44:10 deis-1 sh[1557]: Pulling repository deis/store-monitor
+Nov 18 04:50:29 deis-1 sh[1557]: Status: Downloaded newer image for deis/store-monitor:v1.0.1
+Nov 18 04:50:29 deis-1 systemd[1]: Started deis-store-monitor.
+Nov 18 04:50:41 deis-1 sh[1699]: got monmap epoch 2
+Nov 18 04:50:41 deis-1 sh[1699]: creating /tmp/ceph.mon.keyring
+Nov 18 04:50:41 deis-1 sh[1699]: importing contents of /etc/ceph/ceph.client.admin.keyring into /tmp/ceph.mon.keyring
+Nov 18 04:50:41 deis-1 sh[1699]: importing contents of /etc/ceph/ceph.mon.keyring into /tmp/ceph.mon.keyring
+Nov 18 04:50:42 deis-1 sh[1699]: ceph-mon: set fsid to 297e412d-3fa8-42f2-940c-e79d252fc125
+Nov 18 04:50:42 deis-1 sh[1699]: ceph-mon: created monfs at /var/lib/ceph/mon/ceph-deis-1 for mon.deis-1
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.282162 7fc3654098c0  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-mon, pid 1
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.598833 7fc3654098c0  0 mon.deis-1 does not exist in monmap, will attempt to join an existing cluster
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.599030 7fc3654098c0  0 using public_addr 172.17.8.100:6789/0 -> 172.17.8.100:6789/0
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.599306 7fc3654098c0  0 starting mon.deis-1 rank -1 at 172.17.8.100:6789/0 mon_data /var/lib/ceph/mon/ceph-deis-1 fsid 297e412d-3fa8-42f2-940c-e79d252fc125
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.601094 7fc3654098c0  1 mon.deis-1@-1(probing) e0 preinit fsid 297e412d-3fa8-42f2-940c-e79d252fc125
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.602221 7fc3654098c0  1 mon.deis-1@-1(probing) e0  initial_members deis-2, filtering seed monmap
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.628543 7fc35dc27700  1 mon.deis-1@-1(synchronizing).paxosservice(pgmap 1..2) refresh upgraded, format 0 -> 1
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.629052 7fc35dc27700  1 mon.deis-1@-1(synchronizing).pg v0 on_upgrade discarding in-core PGMap
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.631954 7fc35dc27700  0 mon.deis-1@-1(synchronizing).mds e1 print_map
+Nov 18 04:50:42 deis-1 sh[1699]: epoch        1
+Nov 18 04:50:42 deis-1 sh[1699]: flags        0
+Nov 18 04:50:42 deis-1 sh[1699]: created        0.000000
+Nov 18 04:50:42 deis-1 sh[1699]: modified        2014-11-18 04:51:09.751629
+Nov 18 04:50:42 deis-1 sh[1699]: tableserver        0
+Nov 18 04:50:42 deis-1 sh[1699]: root        0
+Nov 18 04:50:42 deis-1 sh[1699]: session_timeout        0
+Nov 18 04:50:42 deis-1 sh[1699]: session_autoclose        0
+Nov 18 04:50:42 deis-1 sh[1699]: max_file_size        0
+Nov 18 04:50:42 deis-1 sh[1699]: last_failure        0
+Nov 18 04:50:42 deis-1 sh[1699]: last_failure_osd_epoch        0
+Nov 18 04:50:42 deis-1 sh[1699]: compat        compat={},rocompat={},incompat={}
+Nov 18 04:50:42 deis-1 sh[1699]: max_mds        0
+Nov 18 04:50:42 deis-1 sh[1699]: in
+Nov 18 04:50:42 deis-1 sh[1699]: up        {}
+Nov 18 04:50:42 deis-1 sh[1699]: failed
+Nov 18 04:50:42 deis-1 sh[1699]: stopped
+Nov 18 04:50:42 deis-1 sh[1699]: data_pools
+Nov 18 04:50:42 deis-1 sh[1699]: metadata_pool        0
+Nov 18 04:50:42 deis-1 sh[1699]: inline_data        disabled
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.636075 7fc35dc27700  1 mon.deis-1@-1(synchronizing).osd e1 e1: 0 osds: 0 up, 0 in
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.642425 7fc35dc27700  0 mon.deis-1@-1(synchronizing).osd e1 crush map has features 1107558400, adjusting msgr requires
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.642503 7fc35dc27700  0 mon.deis-1@-1(synchronizing).osd e1 crush map has features 1107558400, adjusting msgr requires
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.642534 7fc35dc27700  0 mon.deis-1@-1(synchronizing).osd e1 crush map has features 1107558400, adjusting msgr requires
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.642555 7fc35dc27700  0 mon.deis-1@-1(synchronizing).osd e1 crush map has features 1107558400, adjusting msgr requires
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.642716 7fc35dc27700  1 mon.deis-1@-1(synchronizing).paxosservice(auth 1..3) refresh upgraded, format 0 -> 1
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.703460 7fc35bb22700  0 -- 172.17.8.100:6789/0 >> 172.17.8.101:6789/0 pipe(0x4e48dc0 sd=19 :45452 s=2 pgs=7 cs=1 l=0 c=0x4e41b80).fault, initiating reconnect
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.708199 7fc35b920700  0 -- 172.17.8.100:6789/0 >> 172.17.8.101:6789/0 pipe(0x4e49080 sd=21 :6789 s=0 pgs=0 cs=0 l=0 c=0x4e41fa0).accept connect_seq 0 vs existing 2 state connecting
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.708256 7fc35b920700  0 -- 172.17.8.100:6789/0 >> 172.17.8.101:6789/0 pipe(0x4e49080 sd=21 :6789 s=0 pgs=0 cs=0 l=0 c=0x4e41fa0).accept peer reset, then tried to connect to us, replacing
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.733599 7fc35ba21700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:6789/0 pipe(0x4e48b00 sd=20 :44085 s=2 pgs=4 cs=1 l=0 c=0x4e418c0).fault with nothing to send, going to standby
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.744202 7fc365406700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:6789/0 pipe(0x4e49b80 sd=19 :6789 s=0 pgs=0 cs=0 l=0 c=0x4e42260).accept connect_seq 0 vs existing 1 state standby
+Nov 18 04:50:42 deis-1 sh[1699]: 2014-11-18 04:50:42.744273 7fc365406700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:6789/0 pipe(0x4e49b80 sd=19 :6789 s=0 pgs=0 cs=0 l=0 c=0x4e42260).accept peer reset, then tried to connect to us, replacing
+Nov 18 04:50:44 deis-1 sh[1699]: 2014-11-18 04:50:44.652444 7fc35dc27700  0 mon.deis-1@-1(probing) e3  my rank is now 0 (was -1)
+Nov 18 04:50:44 deis-1 sh[1699]: 2014-11-18 04:50:44.659854 7fc35b920700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:6789/0 pipe(0x4e498c0 sd=20 :6789 s=0 pgs=0 cs=0 l=0 c=0x4e42aa0).accept connect_seq 2 vs existing 0 state connecting
+Nov 18 04:50:44 deis-1 sh[1699]: 2014-11-18 04:50:44.662862 7fc35b920700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:6789/0 pipe(0x4e498c0 sd=20 :6789 s=0 pgs=0 cs=0 l=0 c=0x4e42aa0).accept we reset (peer sent cseq 2, 0x4e48dc0.cseq = 0), sending RESETSESSION
+Nov 18 04:50:44 deis-1 sh[1699]: 2014-11-18 04:50:44.666802 7fc35dc27700  0 log_channel(cluster) log [INF] : mon.deis-1 calling new monitor election
+Nov 18 04:50:44 deis-1 sh[1699]: 2014-11-18 04:50:44.666977 7fc35dc27700  1 mon.deis-1@0(electing).elector(1) init, last seen epoch 1
+Nov 18 04:50:47 deis-1 sh[1699]: 2014-11-18 04:50:47.615558 7fc35dc27700  0 log_channel(cluster) log [INF] : mon.deis-1 calling new monitor election
+Nov 18 04:50:47 deis-1 sh[1699]: 2014-11-18 04:50:47.615657 7fc35dc27700  1 mon.deis-1@0(electing).elector(5) init, last seen epoch 5
+Nov 18 04:50:47 deis-1 sh[1699]: 2014-11-18 04:50:47.631872 7fc35dc27700  0 log_channel(cluster) log [INF] : mon.deis-1@0 won leader election with quorum 0,1,2
+Nov 18 04:50:47 deis-1 sh[1699]: 2014-11-18 04:50:47.811926 7fc35dc27700  0 log_channel(cluster) log [INF] : monmap e3: 3 mons at {deis-1=172.17.8.100:6789/0,deis-2=172.17.8.101:6789/0,deis-3=172.17.8.102:6789/0}
+Nov 18 04:50:47 deis-1 sh[1699]: 2014-11-18 04:50:47.812255 7fc35dc27700  0 log_channel(cluster) log [INF] : pgmap v2: 64 pgs: 64 creating; 0 bytes data, 0 kB used, 0 kB / 0 kB avail
+Nov 18 04:50:47 deis-1 sh[1699]: 2014-11-18 04:50:47.812416 7fc35dc27700  0 log_channel(cluster) log [INF] : mdsmap e1: 0/0/0 up
+Nov 18 04:50:47 deis-1 sh[1699]: 2014-11-18 04:50:47.812566 7fc35dc27700  0 log_channel(cluster) log [INF] : osdmap e1: 0 osds: 0 up, 0 in
+Nov 18 04:50:47 deis-1 sh[1699]: 2014-11-18 04:50:47.812741 7fc35dc27700  0 log_channel(cluster) log [WRN] : mon.1 172.17.8.101:6789/0 clock skew 45.39s > max 0.05s
+Nov 18 04:50:47 deis-1 sh[1699]: 2014-11-18 04:50:47.814247 7fc35dc27700  0 log_channel(cluster) log [WRN] : message from mon.1 was stamped 45.726568s in the future, clocks not synchronized
+Nov 18 04:50:55 deis-1 sh[1699]: 2014-11-18 04:50:55.664159 7fc35dc27700  0 log_channel(cluster) log [WRN] : message from mon.1 was stamped 46.041848s in the future, clocks not synchronized
+Nov 18 04:51:12 deis-1 sh[1699]: 2014-11-18 04:51:12.612557 7fc35dc27700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd create"} v 0) v1
+Nov 18 04:51:12 deis-1 sh[1699]: 2014-11-18 04:51:12.612647 7fc35dc27700  0 log_channel(audit) log [INF] : from='client.4199 :/0' entity='forwarded-request' cmd=[{"prefix": "osd create"}]: dispatch
+Nov 18 04:51:13 deis-1 sh[1699]: 2014-11-18 04:51:13.289984 7fc35f42a700  1 mon.deis-1@0(leader).osd e2 e2: 1 osds: 0 up, 0 in
+Nov 18 04:51:13 deis-1 sh[1699]: 2014-11-18 04:51:13.472629 7fc35f42a700  0 log_channel(audit) log [INF] : from='client.4199 :/0' entity='forwarded-request' cmd='[{"prefix": "osd create"}]': finished
+Nov 18 04:51:13 deis-1 sh[1699]: 2014-11-18 04:51:13.472822 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e2: 1 osds: 0 up, 0 in
+Nov 18 04:51:15 deis-1 sh[1699]: 2014-11-18 04:51:15.865191 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v3: 64 pgs: 64 creating; 0 bytes data, 0 kB used, 0 kB / 0 kB avail
+Nov 18 04:51:19 deis-1 sh[1699]: 2014-11-18 04:51:19.440783 7fc35dc27700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd create"} v 0) v1
+Nov 18 04:51:19 deis-1 sh[1699]: 2014-11-18 04:51:19.440843 7fc35dc27700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.102:0/1000027' entity='client.admin' cmd=[{"prefix": "osd create"}]: dispatch
+Nov 18 04:51:21 deis-1 sh[1699]: 2014-11-18 04:51:21.377841 7fc35dc27700  0 log_channel(cluster) log [WRN] : message from mon.1 was stamped 46.251263s in the future, clocks not synchronized
+Nov 18 04:51:21 deis-1 sh[1699]: 2014-11-18 04:51:21.422448 7fc35f42a700  1 mon.deis-1@0(leader).osd e3 e3: 2 osds: 0 up, 0 in
+Nov 18 04:51:21 deis-1 sh[1699]: 2014-11-18 04:51:21.458115 7fc35f42a700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.102:0/1000027' entity='client.admin' cmd='[{"prefix": "osd create"}]': finished
+Nov 18 04:51:21 deis-1 sh[1699]: 2014-11-18 04:51:21.546080 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e3: 2 osds: 0 up, 0 in
+Nov 18 04:51:21 deis-1 sh[1699]: 2014-11-18 04:51:21.778103 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v4: 64 pgs: 64 creating; 0 bytes data, 0 kB used, 0 kB / 0 kB avail
+Nov 18 04:51:25 deis-1 sh[1699]: 2014-11-18 04:51:25.100982 7fc35dc27700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "auth get-or-create", "entity": "osd.0", "caps": ["osd", "allow *", "mon", "allow profile osd"]} v 0) v1
+Nov 18 04:51:25 deis-1 sh[1699]: 2014-11-18 04:51:25.101012 7fc35dc27700  0 log_channel(audit) log [INF] : from='client.4202 :/0' entity='forwarded-request' cmd=[{"prefix": "auth get-or-create", "entity": "osd.0", "caps": ["osd", "allow *", "mon", "allow profile osd"]}]: dispatch
+Nov 18 04:51:25 deis-1 sh[1699]: 2014-11-18 04:51:25.856573 7fc35f42a700  0 log_channel(audit) log [INF] : from='client.4202 :/0' entity='forwarded-request' cmd='[{"prefix": "auth get-or-create", "entity": "osd.0", "caps": ["osd", "allow *", "mon", "allow profile osd"]}]': finished
+Nov 18 04:51:26 deis-1 sh[1699]: 2014-11-18 04:51:26.555111 7fc35dc27700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd create"} v 0) v1
+Nov 18 04:51:26 deis-1 sh[1699]: 2014-11-18 04:51:26.555171 7fc35dc27700  0 log_channel(audit) log [INF] : from='client.4205 :/0' entity='forwarded-request' cmd=[{"prefix": "osd create"}]: dispatch
+Nov 18 04:51:27 deis-1 sh[1699]: 2014-11-18 04:51:27.002475 7fc35f42a700  1 mon.deis-1@0(leader).osd e4 e4: 3 osds: 0 up, 0 in
+Nov 18 04:51:27 deis-1 sh[1699]: 2014-11-18 04:51:27.017323 7fc35f42a700  0 log_channel(audit) log [INF] : from='client.4205 :/0' entity='forwarded-request' cmd='[{"prefix": "osd create"}]': finished
+Nov 18 04:51:27 deis-1 sh[1699]: 2014-11-18 04:51:27.017799 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e4: 3 osds: 0 up, 0 in
+Nov 18 04:51:27 deis-1 sh[1699]: 2014-11-18 04:51:27.035803 7fc35dc27700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd crush add", "args": ["root=default", "host=deis-2"], "id": 0, "weight": 1.0} v 0) v1
+Nov 18 04:51:27 deis-1 sh[1699]: 2014-11-18 04:51:27.035860 7fc35dc27700  0 log_channel(audit) log [INF] : from='client.4208 :/0' entity='forwarded-request' cmd=[{"prefix": "osd crush add", "args": ["root=default", "host=deis-2"], "id": 0, "weight": 1.0}]: dispatch
+Nov 18 04:51:27 deis-1 sh[1699]: 2014-11-18 04:51:27.112641 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v5: 64 pgs: 64 creating; 0 bytes data, 0 kB used, 0 kB / 0 kB avail
+Nov 18 04:51:28 deis-1 sh[1699]: 2014-11-18 04:51:28.519554 7fc35f42a700  1 mon.deis-1@0(leader).osd e5 e5: 3 osds: 0 up, 0 in
+Nov 18 04:51:28 deis-1 sh[1699]: 2014-11-18 04:51:28.593619 7fc35f42a700  0 log_channel(audit) log [INF] : from='client.4208 :/0' entity='forwarded-request' cmd='[{"prefix": "osd crush add", "args": ["root=default", "host=deis-2"], "id": 0, "weight": 1.0}]': finished
+Nov 18 04:51:28 deis-1 sh[1699]: 2014-11-18 04:51:28.636666 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e5: 3 osds: 0 up, 0 in
+Nov 18 04:51:28 deis-1 sh[1699]: 2014-11-18 04:51:28.893652 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v6: 64 pgs: 64 creating; 0 bytes data, 0 kB used, 0 kB / 0 kB avail
+Nov 18 04:51:31 deis-1 sh[1699]: 2014-11-18 04:51:31.242471 7fc35dc27700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "auth get-or-create", "entity": "osd.1", "caps": ["osd", "allow *", "mon", "allow profile osd"]} v 0) v1
+Nov 18 04:51:31 deis-1 sh[1699]: 2014-11-18 04:51:31.242513 7fc35dc27700  0 log_channel(audit) log [INF] : from='client.4211 :/0' entity='forwarded-request' cmd=[{"prefix": "auth get-or-create", "entity": "osd.1", "caps": ["osd", "allow *", "mon", "allow profile osd"]}]: dispatch
+Nov 18 04:51:31 deis-1 sh[1699]: 2014-11-18 04:51:31.777644 7fc35f42a700  0 log_channel(audit) log [INF] : from='client.4211 :/0' entity='forwarded-request' cmd='[{"prefix": "auth get-or-create", "entity": "osd.1", "caps": ["osd", "allow *", "mon", "allow profile osd"]}]': finished
+Nov 18 04:51:33 deis-1 sh[1699]: 2014-11-18 04:51:33.046801 7fc35f42a700  1 mon.deis-1@0(leader).osd e6 e6: 3 osds: 1 up, 1 in
+Nov 18 04:51:33 deis-1 sh[1699]: 2014-11-18 04:51:33.061338 7fc35f42a700  0 log_channel(cluster) log [INF] : osd.0 172.17.8.101:6800/1 boot
+Nov 18 04:51:33 deis-1 sh[1699]: 2014-11-18 04:51:33.086448 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e6: 3 osds: 1 up, 1 in
+Nov 18 04:51:33 deis-1 sh[1699]: 2014-11-18 04:51:33.135544 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v7: 64 pgs: 64 creating; 0 bytes data, 0 kB used, 0 kB / 0 kB avail
+Nov 18 04:51:34 deis-1 sh[1699]: 2014-11-18 04:51:34.137704 7fc35dc27700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "auth get-or-create", "entity": "osd.2", "caps": ["osd", "allow *", "mon", "allow profile osd"]} v 0) v1
+Nov 18 04:51:34 deis-1 sh[1699]: 2014-11-18 04:51:34.137733 7fc35dc27700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.100:0/1000091' entity='client.admin' cmd=[{"prefix": "auth get-or-create", "entity": "osd.2", "caps": ["osd", "allow *", "mon", "allow profile osd"]}]: dispatch
+Nov 18 04:51:34 deis-1 sh[1699]: 2014-11-18 04:51:34.439367 7fc35dc27700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd crush add", "args": ["root=default", "host=deis-3"], "id": 1, "weight": 1.0} v 0) v1
+Nov 18 04:51:34 deis-1 sh[1699]: 2014-11-18 04:51:34.439425 7fc35dc27700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.102:0/1000118' entity='client.admin' cmd=[{"prefix": "osd crush add", "args": ["root=default", "host=deis-3"], "id": 1, "weight": 1.0}]: dispatch
+Nov 18 04:51:34 deis-1 sh[1699]: 2014-11-18 04:51:34.575565 7fc35f42a700  1 mon.deis-1@0(leader).osd e7 e7: 3 osds: 1 up, 1 in
+Nov 18 04:51:34 deis-1 sh[1699]: 2014-11-18 04:51:34.610274 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e7: 3 osds: 1 up, 1 in
+Nov 18 04:51:34 deis-1 sh[1699]: 2014-11-18 04:51:34.728527 7fc35f42a700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.100:0/1000091' entity='client.admin' cmd='[{"prefix": "auth get-or-create", "entity": "osd.2", "caps": ["osd", "allow *", "mon", "allow profile osd"]}]': finished
+Nov 18 04:51:34 deis-1 sh[1699]: 2014-11-18 04:51:34.796829 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v8: 64 pgs: 64 creating; 0 bytes data, 0 kB used, 0 kB / 0 kB avail
+Nov 18 04:51:41 deis-1 sh[1699]: 2014-11-18 04:51:41.289504 7fc35f42a700  1 mon.deis-1@0(leader).osd e8 e8: 3 osds: 1 up, 1 in
+Nov 18 04:51:41 deis-1 sh[1699]: 2014-11-18 04:51:41.363833 7fc35f42a700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.102:0/1000118' entity='client.admin' cmd='[{"prefix": "osd crush add", "args": ["root=default", "host=deis-3"], "id": 1, "weight": 1.0}]': finished
+Nov 18 04:51:41 deis-1 sh[1699]: 2014-11-18 04:51:41.363895 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e8: 3 osds: 1 up, 1 in
+Nov 18 04:51:47 deis-1 sh[1699]: 2014-11-18 04:51:44.771872 7fc35e428700  0 mon.deis-1@0(leader).data_health(6) update_stats avail 65% total 16526 MB, used 5507 MB, avail 10831 MB
+Nov 18 04:51:47 deis-1 sh[1699]: 2014-11-18 04:51:47.249651 7fc35dc27700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd crush add", "args": ["root=default", "host=deis-1"], "id": 2, "weight": 1.0} v 0) v1
+Nov 18 04:51:47 deis-1 sh[1699]: 2014-11-18 04:51:47.249708 7fc35dc27700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.100:0/1000122' entity='client.admin' cmd=[{"prefix": "osd crush add", "args": ["root=default", "host=deis-1"], "id": 2, "weight": 1.0}]: dispatch
+Nov 18 04:51:48 deis-1 sh[1699]: 2014-11-18 04:51:48.865585 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v10: 64 pgs: 64 peering; 0 bytes data, 5507 MB used, 10831 MB / 16526 MB avail
+Nov 18 04:51:49 deis-1 sh[1699]: 2014-11-18 04:51:49.565741 7fc35f42a700  1 mon.deis-1@0(leader).osd e9 e9: 3 osds: 1 up, 1 in
+Nov 18 04:51:50 deis-1 sh[1699]: 2014-11-18 04:51:50.389114 7fc35f42a700  0 -- 172.17.8.100:6789/0 submit_message osd_map(8..9 src has 1..9) v3 remote, 172.17.8.101:6800/1, failed lossy con, dropping message 0x5158fc0
+Nov 18 04:51:50 deis-1 sh[1699]: 2014-11-18 04:51:50.595088 7fc35f42a700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.100:0/1000122' entity='client.admin' cmd='[{"prefix": "osd crush add", "args": ["root=default", "host=deis-1"], "id": 2, "weight": 1.0}]': finished
+Nov 18 04:51:50 deis-1 sh[1699]: 2014-11-18 04:51:50.595807 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e9: 3 osds: 1 up, 1 in
+Nov 18 04:51:50 deis-1 sh[1699]: 2014-11-18 04:51:50.689864 7fc35dc27700  0 log_channel(cluster) log [INF] : mon.deis-1 calling new monitor election
+Nov 18 04:51:50 deis-1 sh[1699]: 2014-11-18 04:51:50.689938 7fc35dc27700  1 mon.deis-1@0(electing).elector(7) init, last seen epoch 7
+Nov 18 04:51:50 deis-1 sh[1699]: 2014-11-18 04:51:50.845096 7fc35dc27700  0 log_channel(cluster) log [INF] : mon.deis-1 calling new monitor election
+Nov 18 04:51:50 deis-1 sh[1699]: 2014-11-18 04:51:50.851788 7fc35dc27700  1 mon.deis-1@0(electing).elector(9) init, last seen epoch 9
+Nov 18 04:51:50 deis-1 sh[1699]: 2014-11-18 04:51:50.887799 7fc35dc27700  0 log_channel(cluster) log [INF] : mon.deis-1@0 won leader election with quorum 0,1,2
+Nov 18 04:51:51 deis-1 sh[1699]: 2014-11-18 04:51:51.015210 7fc35dc27700  0 log_channel(cluster) log [WRN] : mon.1 172.17.8.101:6789/0 clock skew 74.6873s > max 0.05s
+Nov 18 04:51:51 deis-1 sh[1699]: 2014-11-18 04:51:51.017815 7fc35dc27700  0 log_channel(cluster) log [WRN] : mon.2 172.17.8.102:6789/0 clock skew 1.06645s > max 0.05s
+Nov 18 04:51:51 deis-1 sh[1699]: 2014-11-18 04:51:51.050299 7fc35dc27700  0 log_channel(cluster) log [INF] : monmap e3: 3 mons at {deis-1=172.17.8.100:6789/0,deis-2=172.17.8.101:6789/0,deis-3=172.17.8.102:6789/0}
+Nov 18 04:51:51 deis-1 sh[1699]: 2014-11-18 04:51:51.053631 7fc35dc27700  0 log_channel(cluster) log [INF] : pgmap v11: 64 pgs: 64 peering; 0 bytes data, 5507 MB used, 10831 MB / 16526 MB avail
+Nov 18 04:51:51 deis-1 sh[1699]: 2014-11-18 04:51:51.060355 7fc35dc27700  0 log_channel(cluster) log [INF] : mdsmap e1: 0/0/0 up
+Nov 18 04:51:51 deis-1 sh[1699]: 2014-11-18 04:51:51.063177 7fc35dc27700  0 log_channel(cluster) log [INF] : osdmap e9: 3 osds: 1 up, 1 in
+Nov 18 04:51:51 deis-1 sh[1699]: 2014-11-18 04:51:51.511255 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v12: 64 pgs: 64 active+undersized+degraded; 0 bytes data, 5508 MB used, 10831 MB / 16526 MB avail
+Nov 18 04:51:52 deis-1 sh[1699]: 2014-11-18 04:51:52.295822 7fc35f42a700  1 mon.deis-1@0(leader).osd e10 e10: 3 osds: 3 up, 3 in
+Nov 18 04:51:52 deis-1 sh[1699]: 2014-11-18 04:51:52.322199 7fc35f42a700  0 log_channel(cluster) log [INF] : osd.1 172.17.8.102:6800/1 boot
+Nov 18 04:51:52 deis-1 sh[1699]: 2014-11-18 04:51:52.324662 7fc35f42a700  0 log_channel(cluster) log [INF] : osd.2 172.17.8.100:6800/1 boot
+Nov 18 04:51:52 deis-1 sh[1699]: 2014-11-18 04:51:52.492533 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e10: 3 osds: 3 up, 3 in
+Nov 18 04:51:52 deis-1 sh[1699]: 2014-11-18 04:51:52.585614 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v13: 64 pgs: 64 active+undersized+degraded; 0 bytes data, 5508 MB used, 10831 MB / 16526 MB avail
+Nov 18 04:51:53 deis-1 sh[1699]: 2014-11-18 04:51:53.780751 7fc35f42a700  1 mon.deis-1@0(leader).osd e11 e11: 3 osds: 3 up, 3 in
+Nov 18 04:51:53 deis-1 sh[1699]: 2014-11-18 04:51:53.819181 7fc35f42a700  0 log_channel(cluster) log [INF] : osdmap e11: 3 osds: 3 up, 3 in
+Nov 18 04:51:53 deis-1 sh[1699]: 2014-11-18 04:51:53.934173 7fc35f42a700  0 log_channel(cluster) log [INF] : pgmap v14: 64 pgs: 64 active+undersized+degraded; 0 bytes data, 5508 MB used, 10831 MB / 16526 MB avail
+-- Reboot --
+Nov 18 05:05:59 deis-1 systemd[1]: Starting deis-store-monitor...
+Nov 18 05:06:04 deis-1 systemd[1]: Started deis-store-monitor.
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.299703 7f12f55118c0  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-mon, pid 1
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.603262 7f12f55118c0  0 starting mon.deis-1 rank 0 at 172.17.8.100:6789/0 mon_data /var/lib/ceph/mon/ceph-deis-1 fsid 297e412d-3fa8-42f2-940c-e79d252fc125
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.605484 7f12f55118c0  1 mon.deis-1@-1(probing) e3 preinit fsid 297e412d-3fa8-42f2-940c-e79d252fc125
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.607564 7f12f55118c0  1 mon.deis-1@-1(probing).paxosservice(pgmap 1..14) refresh upgraded, format 0 -> 1
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.607880 7f12f55118c0  1 mon.deis-1@-1(probing).pg v0 on_upgrade discarding in-core PGMap
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.610741 7f12f55118c0  0 mon.deis-1@-1(probing).mds e1 print_map
+Nov 18 05:06:06 deis-1 sh[1212]: epoch        1
+Nov 18 05:06:06 deis-1 sh[1212]: flags        0
+Nov 18 05:06:06 deis-1 sh[1212]: created        0.000000
+Nov 18 05:06:06 deis-1 sh[1212]: modified        2014-11-18 04:51:09.751629
+Nov 18 05:06:06 deis-1 sh[1212]: tableserver        0
+Nov 18 05:06:06 deis-1 sh[1212]: root        0
+Nov 18 05:06:06 deis-1 sh[1212]: session_timeout        0
+Nov 18 05:06:06 deis-1 sh[1212]: session_autoclose        0
+Nov 18 05:06:06 deis-1 sh[1212]: max_file_size        0
+Nov 18 05:06:06 deis-1 sh[1212]: last_failure        0
+Nov 18 05:06:06 deis-1 sh[1212]: last_failure_osd_epoch        0
+Nov 18 05:06:06 deis-1 sh[1212]: compat        compat={},rocompat={},incompat={}
+Nov 18 05:06:06 deis-1 sh[1212]: max_mds        0
+Nov 18 05:06:06 deis-1 sh[1212]: in
+Nov 18 05:06:06 deis-1 sh[1212]: up        {}
+Nov 18 05:06:06 deis-1 sh[1212]: failed
+Nov 18 05:06:06 deis-1 sh[1212]: stopped
+Nov 18 05:06:06 deis-1 sh[1212]: data_pools
+Nov 18 05:06:06 deis-1 sh[1212]: metadata_pool        0
+Nov 18 05:06:06 deis-1 sh[1212]: inline_data        disabled
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.615391 7f12f55118c0  0 mon.deis-1@-1(probing).osd e11 crush map has features 1107558400, adjusting msgr requires
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.616394 7f12f55118c0  0 mon.deis-1@-1(probing).osd e11 crush map has features 1107558400, adjusting msgr requires
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.616737 7f12f55118c0  0 mon.deis-1@-1(probing).osd e11 crush map has features 1107558400, adjusting msgr requires
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.617232 7f12f55118c0  0 mon.deis-1@-1(probing).osd e11 crush map has features 1107558400, adjusting msgr requires
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.621432 7f12f55118c0  1 mon.deis-1@-1(probing).paxosservice(auth 1..8) refresh upgraded, format 0 -> 1
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.624060 7f12f55118c0  0 mon.deis-1@-1(probing) e3  my rank is now 0 (was -1)
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.627515 7f12ec52c700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:6789/0 pipe(0x4c52b00 sd=20 :0 s=1 pgs=0 cs=0 l=0 c=0x4c4b8c0).fault
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.627887 7f12f544d700  0 -- 172.17.8.100:6789/0 >> 172.17.8.101:6789/0 pipe(0x4c52dc0 sd=19 :0 s=1 pgs=0 cs=0 l=0 c=0x4c4bb80).fault
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.680681 7f12ebc2a700  0 -- 172.17.8.100:6789/0 >> 172.17.8.101:6789/0 pipe(0x4c53080 sd=21 :6789 s=0 pgs=0 cs=0 l=0 c=0x4c4be40).accept connect_seq 0 vs existing 0 state connecting
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.692061 7f12edd2f700  0 log_channel(cluster) log [INF] : mon.deis-1 calling new monitor election
+Nov 18 05:06:06 deis-1 sh[1212]: 2014-11-18 05:06:06.692209 7f12edd2f700  1 mon.deis-1@0(electing).elector(10) init, last seen epoch 10
+Nov 18 05:06:11 deis-1 sh[1212]: 2014-11-18 05:06:11.705500 7f12ee530700  0 log_channel(cluster) log [INF] : mon.deis-1@0 won leader election with quorum 0,1
+Nov 18 05:06:11 deis-1 sh[1212]: 2014-11-18 05:06:11.723468 7f12edd2f700  0 log_channel(cluster) log [WRN] : mon.1 172.17.8.101:6789/0 clock skew 0.953901s > max 0.05s
+Nov 18 05:06:11 deis-1 sh[1212]: 2014-11-18 05:06:11.731187 7f12ef532700  0 log_channel(cluster) log [INF] : monmap e3: 3 mons at {deis-1=172.17.8.100:6789/0,deis-2=172.17.8.101:6789/0,deis-3=172.17.8.102:6789/0}
+Nov 18 05:06:11 deis-1 sh[1212]: 2014-11-18 05:06:11.732336 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v15: 64 pgs: 50 active+undersized+degraded, 14 peering; 0 bytes data, 11017 MB used, 21662 MB / 33052 MB avail
+Nov 18 05:06:11 deis-1 sh[1212]: 2014-11-18 05:06:11.733269 7f12ef532700  0 log_channel(cluster) log [INF] : mdsmap e1: 0/0/0 up
+Nov 18 05:06:11 deis-1 sh[1212]: 2014-11-18 05:06:11.734139 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e11: 3 osds: 3 up, 3 in
+Nov 18 05:06:11 deis-1 sh[1212]: 2014-11-18 05:06:11.915704 7f12edd2f700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd lspools"} v 0) v1
+Nov 18 05:06:11 deis-1 sh[1212]: 2014-11-18 05:06:11.916166 7f12edd2f700  0 log_channel(audit) log [DBG] : from='client.? 172.17.8.101:0/1000034' entity='client.admin' cmd=[{"prefix": "osd lspools"}]: dispatch
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.805923 7f12ebb29700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:6789/0 pipe(0x4c53b80 sd=21 :6789 s=0 pgs=0 cs=0 l=0 c=0x4c4c260).accept connect_seq 0 vs existing 0 state connecting
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.856642 7f12edd2f700  0 log_channel(cluster) log [INF] : mon.deis-1 calling new monitor election
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.856748 7f12edd2f700  1 mon.deis-1@0(electing).elector(12) init, last seen epoch 12
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.875569 7f12edd2f700  0 log_channel(cluster) log [INF] : mon.deis-1@0 won leader election with quorum 0,1,2
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.884357 7f12edd2f700  0 log_channel(cluster) log [WRN] : mon.1 172.17.8.101:6789/0 clock skew 0.963459s > max 0.05s
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.888307 7f12edd2f700  0 log_channel(cluster) log [INF] : monmap e3: 3 mons at {deis-1=172.17.8.100:6789/0,deis-2=172.17.8.101:6789/0,deis-3=172.17.8.102:6789/0}
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.889504 7f12edd2f700  0 log_channel(cluster) log [INF] : pgmap v15: 64 pgs: 50 active+undersized+degraded, 14 peering; 0 bytes data, 11017 MB used, 21662 MB / 33052 MB avail
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.890792 7f12edd2f700  0 log_channel(cluster) log [INF] : mdsmap e1: 0/0/0 up
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.891318 7f12edd2f700  0 log_channel(cluster) log [INF] : osdmap e11: 3 osds: 3 up, 3 in
+Nov 18 05:06:12 deis-1 sh[1212]: 2014-11-18 05:06:12.894044 7f12edd2f700  0 log_channel(cluster) log [WRN] : mon.2 172.17.8.102:6789/0 clock skew 0.612024s > max 0.05s
+Nov 18 05:06:13 deis-1 sh[1212]: 2014-11-18 05:06:13.594388 7f12edd2f700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd pool create", "pg_num": 128, "pool": "data"} v 0) v1
+Nov 18 05:06:13 deis-1 sh[1212]: 2014-11-18 05:06:13.601158 7f12edd2f700  0 log_channel(audit) log [INF] : from='client.4400 :/0' entity='forwarded-request' cmd=[{"prefix": "osd pool create", "pg_num": 128, "pool": "data"}]: dispatch
+Nov 18 05:06:13 deis-1 sh[1212]: 2014-11-18 05:06:13.745489 7f12ef532700  1 mon.deis-1@0(leader).osd e12 e12: 3 osds: 3 up, 3 in
+Nov 18 05:06:13 deis-1 sh[1212]: 2014-11-18 05:06:13.750386 7f12ef532700  0 log_channel(audit) log [INF] : from='client.4400 :/0' entity='forwarded-request' cmd='[{"prefix": "osd pool create", "pg_num": 128, "pool": "data"}]': finished
+Nov 18 05:06:13 deis-1 sh[1212]: 2014-11-18 05:06:13.753580 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e12: 3 osds: 3 up, 3 in
+Nov 18 05:06:13 deis-1 sh[1212]: 2014-11-18 05:06:13.784275 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v16: 192 pgs: 50 active+undersized+degraded, 128 creating, 14 peering; 0 bytes data, 11017 MB used, 21662 MB / 33052 MB avail
+Nov 18 05:06:14 deis-1 sh[1212]: 2014-11-18 05:06:14.055333 7f12edd2f700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd lspools"} v 0) v1
+Nov 18 05:06:14 deis-1 sh[1212]: 2014-11-18 05:06:14.055789 7f12edd2f700  0 log_channel(audit) log [DBG] : from='client.? 172.17.8.101:0/1000102' entity='client.admin' cmd=[{"prefix": "osd lspools"}]: dispatch
+Nov 18 05:06:14 deis-1 sh[1212]: 2014-11-18 05:06:14.310918 7f12edd2f700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd pool create", "pg_num": 128, "pool": "metadata"} v 0) v1
+Nov 18 05:06:14 deis-1 sh[1212]: 2014-11-18 05:06:14.311327 7f12edd2f700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000134' entity='client.admin' cmd=[{"prefix": "osd pool create", "pg_num": 128, "pool": "metadata"}]: dispatch
+Nov 18 05:06:14 deis-1 sh[1212]: 2014-11-18 05:06:14.795538 7f12ef532700  1 mon.deis-1@0(leader).osd e13 e13: 3 osds: 3 up, 3 in
+Nov 18 05:06:14 deis-1 sh[1212]: 2014-11-18 05:06:14.825161 7f12ef532700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000134' entity='client.admin' cmd='[{"prefix": "osd pool create", "pg_num": 128, "pool": "metadata"}]': finished
+Nov 18 05:06:14 deis-1 sh[1212]: 2014-11-18 05:06:14.849495 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e13: 3 osds: 3 up, 3 in
+Nov 18 05:06:14 deis-1 sh[1212]: 2014-11-18 05:06:14.865194 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v17: 320 pgs: 50 active+undersized+degraded, 256 creating, 14 peering; 0 bytes data, 11017 MB used, 21662 MB / 33052 MB avail
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.081951 7f12edd2f700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "fs ls"} v 0) v1
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.083018 7f12edd2f700  0 log_channel(audit) log [DBG] : from='client.? 172.17.8.101:0/1000165' entity='client.admin' cmd=[{"prefix": "fs ls"}]: dispatch
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.370373 7f12edd2f700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "fs new", "data": "data", "fs_name": "deis", "metadata": "metadata"} v 0) v1
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.376952 7f12edd2f700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000197' entity='client.admin' cmd=[{"prefix": "fs new", "data": "data", "fs_name": "deis", "metadata": "metadata"}]: dispatch
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.385044 7f12ef532700  1 mon.deis-1@0(leader).osd e14 e14: 3 osds: 3 up, 3 in
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.397526 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e14: 3 osds: 3 up, 3 in
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.402556 7f12ef532700  0 mon.deis-1@0(leader).mds e2 print_map
+Nov 18 05:06:15 deis-1 sh[1212]: epoch        2
+Nov 18 05:06:15 deis-1 sh[1212]: flags        0
+Nov 18 05:06:15 deis-1 sh[1212]: created        2014-11-18 05:06:15.379646
+Nov 18 05:06:15 deis-1 sh[1212]: modified        2014-11-18 05:06:15.379704
+Nov 18 05:06:15 deis-1 sh[1212]: tableserver        0
+Nov 18 05:06:15 deis-1 sh[1212]: root        0
+Nov 18 05:06:15 deis-1 sh[1212]: session_timeout        60
+Nov 18 05:06:15 deis-1 sh[1212]: session_autoclose        300
+Nov 18 05:06:15 deis-1 sh[1212]: max_file_size        1099511627776
+Nov 18 05:06:15 deis-1 sh[1212]: last_failure        0
+Nov 18 05:06:15 deis-1 sh[1212]: last_failure_osd_epoch        0
+Nov 18 05:06:15 deis-1 sh[1212]: compat        compat={},rocompat={},incompat={1=base v0.20,2=client writeable ranges,3=default file layouts on dirs,4=dir inode in separate object,5=mds uses versioned encoding,6=dirfrag is stored in omap,8=no anchor table}
+Nov 18 05:06:15 deis-1 sh[1212]: max_mds        1
+Nov 18 05:06:15 deis-1 sh[1212]: in
+Nov 18 05:06:15 deis-1 sh[1212]: up        {}
+Nov 18 05:06:15 deis-1 sh[1212]: failed
+Nov 18 05:06:15 deis-1 sh[1212]: stopped
+Nov 18 05:06:15 deis-1 sh[1212]: data_pools        1
+Nov 18 05:06:15 deis-1 sh[1212]: metadata_pool        2
+Nov 18 05:06:15 deis-1 sh[1212]: inline_data        disabled
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.410268 7f12ef532700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000197' entity='client.admin' cmd='[{"prefix": "fs new", "data": "data", "fs_name": "deis", "metadata": "metadata"}]': finished
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.411690 7f12ef532700  0 log_channel(cluster) log [INF] : mdsmap e2: 0/0/1 up
+Nov 18 05:06:15 deis-1 sh[1212]: 2014-11-18 05:06:15.425184 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v18: 320 pgs: 50 active+undersized+degraded, 256 creating, 14 peering; 0 bytes data, 11017 MB used, 21662 MB / 33052 MB avail
+Nov 18 05:06:16 deis-1 sh[1212]: 2014-11-18 05:06:16.049903 7f12edd2f700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "auth get-or-create", "entity": "mds.deis-2", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]} v 0) v1
+Nov 18 05:06:16 deis-1 sh[1212]: 2014-11-18 05:06:16.049941 7f12edd2f700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000235' entity='client.admin' cmd=[{"prefix": "auth get-or-create", "entity": "mds.deis-2", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]}]: dispatch
+Nov 18 05:06:16 deis-1 sh[1212]: 2014-11-18 05:06:16.061686 7f12ef532700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000235' entity='client.admin' cmd='[{"prefix": "auth get-or-create", "entity": "mds.deis-2", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]}]': finished
+Nov 18 05:06:16 deis-1 sh[1212]: 2014-11-18 05:06:16.624762 7f12ee530700  1 mon.deis-1@0(leader).mds e2 adding standby 172.17.8.101:6800/1 as mds.0
+Nov 18 05:06:16 deis-1 sh[1212]: 2014-11-18 05:06:16.636424 7f12ef532700  0 mon.deis-1@0(leader).mds e3 print_map
+Nov 18 05:06:16 deis-1 sh[1212]: epoch        3
+Nov 18 05:06:16 deis-1 sh[1212]: flags        0
+Nov 18 05:06:16 deis-1 sh[1212]: created        2014-11-18 05:06:15.379646
+Nov 18 05:06:16 deis-1 sh[1212]: modified        2014-11-18 05:06:16.624877
+Nov 18 05:06:16 deis-1 sh[1212]: tableserver        0
+Nov 18 05:06:16 deis-1 sh[1212]: root        0
+Nov 18 05:06:16 deis-1 sh[1212]: session_timeout        60
+Nov 18 05:06:16 deis-1 sh[1212]: session_autoclose        300
+Nov 18 05:06:16 deis-1 sh[1212]: max_file_size        1099511627776
+Nov 18 05:06:16 deis-1 sh[1212]: last_failure        0
+Nov 18 05:06:16 deis-1 sh[1212]: last_failure_osd_epoch        0
+Nov 18 05:06:16 deis-1 sh[1212]: compat        compat={},rocompat={},incompat={1=base v0.20,2=client writeable ranges,3=default file layouts on dirs,4=dir inode in separate object,5=mds uses versioned encoding,6=dirfrag is stored in omap,8=no anchor table}
+Nov 18 05:06:16 deis-1 sh[1212]: max_mds        1
+Nov 18 05:06:16 deis-1 sh[1212]: in        0
+Nov 18 05:06:16 deis-1 sh[1212]: up        {0=4416}
+Nov 18 05:06:16 deis-1 sh[1212]: failed
+Nov 18 05:06:16 deis-1 sh[1212]: stopped
+Nov 18 05:06:16 deis-1 sh[1212]: data_pools        1
+Nov 18 05:06:16 deis-1 sh[1212]: metadata_pool        2
+Nov 18 05:06:16 deis-1 sh[1212]: inline_data        disabled
+Nov 18 05:06:16 deis-1 sh[1212]: 4416:        172.17.8.101:6800/1 'deis-2' mds.0.1 up:creating seq 1
+Nov 18 05:06:16 deis-1 sh[1212]: 2014-11-18 05:06:16.643936 7f12ef532700  0 log_channel(cluster) log [INF] : mds.? 172.17.8.101:6800/1 up:boot
+Nov 18 05:06:16 deis-1 sh[1212]: 2014-11-18 05:06:16.644242 7f12ef532700  0 log_channel(cluster) log [INF] : mdsmap e3: 1/1/1 up {0=deis-2=up:creating}
+Nov 18 05:06:18 deis-1 sh[1212]: 2014-11-18 05:06:18.492196 7f12edd2f700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "auth get-or-create", "entity": "mds.deis-3", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]} v 0) v1
+Nov 18 05:06:18 deis-1 sh[1212]: 2014-11-18 05:06:18.492233 7f12edd2f700  0 log_channel(audit) log [INF] : from='client.4403 :/0' entity='forwarded-request' cmd=[{"prefix": "auth get-or-create", "entity": "mds.deis-3", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]}]: dispatch
+Nov 18 05:06:18 deis-1 sh[1212]: 2014-11-18 05:06:18.521058 7f12ef532700  0 log_channel(audit) log [INF] : from='client.4403 :/0' entity='forwarded-request' cmd='[{"prefix": "auth get-or-create", "entity": "mds.deis-3", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]}]': finished
+Nov 18 05:06:19 deis-1 sh[1212]: 2014-11-18 05:06:19.573819 7f12ef532700  0 mon.deis-1@0(leader).mds e4 print_map
+Nov 18 05:06:19 deis-1 sh[1212]: epoch        4
+Nov 18 05:06:19 deis-1 sh[1212]: flags        0
+Nov 18 05:06:19 deis-1 sh[1212]: created        2014-11-18 05:06:15.379646
+Nov 18 05:06:19 deis-1 sh[1212]: modified        2014-11-18 05:06:19.519516
+Nov 18 05:06:19 deis-1 sh[1212]: tableserver        0
+Nov 18 05:06:19 deis-1 sh[1212]: root        0
+Nov 18 05:06:19 deis-1 sh[1212]: session_timeout        60
+Nov 18 05:06:19 deis-1 sh[1212]: session_autoclose        300
+Nov 18 05:06:19 deis-1 sh[1212]: max_file_size        1099511627776
+Nov 18 05:06:19 deis-1 sh[1212]: last_failure        0
+Nov 18 05:06:19 deis-1 sh[1212]: last_failure_osd_epoch        0
+Nov 18 05:06:19 deis-1 sh[1212]: compat        compat={},rocompat={},incompat={1=base v0.20,2=client writeable ranges,3=default file layouts on dirs,4=dir inode in separate object,5=mds uses versioned encoding,6=dirfrag is stored in omap,8=no anchor table}
+Nov 18 05:06:19 deis-1 sh[1212]: max_mds        1
+Nov 18 05:06:19 deis-1 sh[1212]: in        0
+Nov 18 05:06:19 deis-1 sh[1212]: up        {0=4416}
+Nov 18 05:06:19 deis-1 sh[1212]: failed
+Nov 18 05:06:19 deis-1 sh[1212]: stopped
+Nov 18 05:06:19 deis-1 sh[1212]: data_pools        1
+Nov 18 05:06:19 deis-1 sh[1212]: metadata_pool        2
+Nov 18 05:06:19 deis-1 sh[1212]: inline_data        disabled
+Nov 18 05:06:19 deis-1 sh[1212]: 4416:        172.17.8.101:6800/1 'deis-2' mds.0.1 up:creating seq 1
+Nov 18 05:06:19 deis-1 sh[1212]: 4419:        172.17.8.102:6800/1 'deis-3' mds.-1.0 up:standby seq 1
+Nov 18 05:06:19 deis-1 sh[1212]: 2014-11-18 05:06:19.586958 7f12ef532700  0 log_channel(cluster) log [INF] : mds.? 172.17.8.102:6800/1 up:boot
+Nov 18 05:06:19 deis-1 sh[1212]: 2014-11-18 05:06:19.588872 7f12ef532700  0 log_channel(cluster) log [INF] : mdsmap e4: 1/1/1 up {0=deis-2=up:creating}, 1 up:standby
+Nov 18 05:06:20 deis-1 sh[1212]: 2014-11-18 05:06:20.099761 7f12ef532700  1 mon.deis-1@0(leader).osd e15 e15: 3 osds: 2 up, 3 in
+Nov 18 05:06:20 deis-1 sh[1212]: 2014-11-18 05:06:20.126864 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e15: 3 osds: 2 up, 3 in
+Nov 18 05:06:20 deis-1 sh[1212]: 2014-11-18 05:06:20.145749 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v19: 320 pgs: 256 creating, 14 peering, 50 stale+active+undersized+degraded; 0 bytes data, 11017 MB used, 21662 MB / 33052 MB avail
+Nov 18 05:06:20 deis-1 sh[1212]: 2014-11-18 05:06:20.373582 7f12edd2f700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "auth get-or-create", "entity": "mds.deis-1", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]} v 0) v1
+Nov 18 05:06:20 deis-1 sh[1212]: 2014-11-18 05:06:20.373664 7f12edd2f700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.100:0/1000065' entity='client.admin' cmd=[{"prefix": "auth get-or-create", "entity": "mds.deis-1", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]}]: dispatch
+Nov 18 05:06:20 deis-1 sh[1212]: 2014-11-18 05:06:20.386809 7f12ef532700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.100:0/1000065' entity='client.admin' cmd='[{"prefix": "auth get-or-create", "entity": "mds.deis-1", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]}]': finished
+Nov 18 05:06:21 deis-1 sh[1212]: 2014-11-18 05:06:21.116895 7f12ef532700  1 mon.deis-1@0(leader).osd e16 e16: 3 osds: 3 up, 3 in
+Nov 18 05:06:21 deis-1 sh[1212]: 2014-11-18 05:06:21.121991 7f12ef532700  0 log_channel(cluster) log [INF] : osd.0 172.17.8.101:6801/1 boot
+Nov 18 05:06:21 deis-1 sh[1212]: 2014-11-18 05:06:21.131989 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e16: 3 osds: 3 up, 3 in
+Nov 18 05:06:21 deis-1 sh[1212]: 2014-11-18 05:06:21.141608 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v20: 320 pgs: 256 creating, 14 peering, 50 stale+active+undersized+degraded; 0 bytes data, 11017 MB used, 21662 MB / 33052 MB avail
+Nov 18 05:06:21 deis-1 sh[1212]: 2014-11-18 05:06:21.393699 7f12ef532700  0 mon.deis-1@0(leader).mds e5 print_map
+Nov 18 05:06:21 deis-1 sh[1212]: epoch        5
+Nov 18 05:06:21 deis-1 sh[1212]: flags        0
+Nov 18 05:06:21 deis-1 sh[1212]: created        2014-11-18 05:06:15.379646
+Nov 18 05:06:21 deis-1 sh[1212]: modified        2014-11-18 05:06:21.384456
+Nov 18 05:06:21 deis-1 sh[1212]: tableserver        0
+Nov 18 05:06:21 deis-1 sh[1212]: root        0
+Nov 18 05:06:21 deis-1 sh[1212]: session_timeout        60
+Nov 18 05:06:21 deis-1 sh[1212]: session_autoclose        300
+Nov 18 05:06:21 deis-1 sh[1212]: max_file_size        1099511627776
+Nov 18 05:06:21 deis-1 sh[1212]: last_failure        0
+Nov 18 05:06:21 deis-1 sh[1212]: last_failure_osd_epoch        0
+Nov 18 05:06:21 deis-1 sh[1212]: compat        compat={},rocompat={},incompat={1=base v0.20,2=client writeable ranges,3=default file layouts on dirs,4=dir inode in separate object,5=mds uses versioned encoding,6=dirfrag is stored in omap,8=no anchor table}
+Nov 18 05:06:21 deis-1 sh[1212]: max_mds        1
+Nov 18 05:06:21 deis-1 sh[1212]: in        0
+Nov 18 05:06:21 deis-1 sh[1212]: up        {0=4416}
+Nov 18 05:06:21 deis-1 sh[1212]: failed
+Nov 18 05:06:21 deis-1 sh[1212]: stopped
+Nov 18 05:06:21 deis-1 sh[1212]: data_pools        1
+Nov 18 05:06:21 deis-1 sh[1212]: metadata_pool        2
+Nov 18 05:06:21 deis-1 sh[1212]: inline_data        disabled
+Nov 18 05:06:21 deis-1 sh[1212]: 4416:        172.17.8.101:6800/1 'deis-2' mds.0.1 up:creating seq 1
+Nov 18 05:06:21 deis-1 sh[1212]: 4419:        172.17.8.102:6800/1 'deis-3' mds.-1.0 up:standby seq 1
+Nov 18 05:06:21 deis-1 sh[1212]: 4428:        172.17.8.100:6800/1 'deis-1' mds.-1.0 up:standby seq 1
+Nov 18 05:06:21 deis-1 sh[1212]: 2014-11-18 05:06:21.400382 7f12ef532700  0 log_channel(cluster) log [INF] : mds.? 172.17.8.100:6800/1 up:boot
+Nov 18 05:06:21 deis-1 sh[1212]: 2014-11-18 05:06:21.402135 7f12ef532700  0 log_channel(cluster) log [INF] : mdsmap e5: 1/1/1 up {0=deis-2=up:creating}, 2 up:standby
+Nov 18 05:06:22 deis-1 sh[1212]: 2014-11-18 05:06:22.145495 7f12ef532700  1 mon.deis-1@0(leader).osd e17 e17: 3 osds: 3 up, 3 in
+Nov 18 05:06:22 deis-1 sh[1212]: 2014-11-18 05:06:22.151886 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e17: 3 osds: 3 up, 3 in
+Nov 18 05:06:22 deis-1 sh[1212]: 2014-11-18 05:06:22.172874 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v21: 320 pgs: 256 creating, 14 peering, 50 stale+active+undersized+degraded; 0 bytes data, 11017 MB used, 21662 MB / 33052 MB avail
+Nov 18 05:06:24 deis-1 sh[1212]: 2014-11-18 05:06:24.174614 7f12ef532700  1 mon.deis-1@0(leader).osd e18 e18: 3 osds: 2 up, 3 in
+Nov 18 05:06:24 deis-1 sh[1212]: 2014-11-18 05:06:24.185842 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e18: 3 osds: 2 up, 3 in
+Nov 18 05:06:24 deis-1 sh[1212]: 2014-11-18 05:06:24.221188 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v22: 320 pgs: 14 stale+peering, 256 creating, 50 stale+active+undersized+degraded; 0 bytes data, 11017 MB used, 21662 MB / 33052 MB avail
+Nov 18 05:06:25 deis-1 sh[1212]: 2014-11-18 05:06:25.235169 7f12ef532700  1 mon.deis-1@0(leader).osd e19 e19: 3 osds: 3 up, 3 in
+Nov 18 05:06:25 deis-1 sh[1212]: 2014-11-18 05:06:25.245419 7f12ef532700  0 log_channel(cluster) log [INF] : osd.2 172.17.8.100:6801/1 boot
+Nov 18 05:06:25 deis-1 sh[1212]: 2014-11-18 05:06:25.251140 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e19: 3 osds: 3 up, 3 in
+Nov 18 05:06:25 deis-1 sh[1212]: 2014-11-18 05:06:25.344376 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v24: 320 pgs: 6 stale+peering, 256 creating, 30 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:06:26 deis-1 sh[1212]: 2014-11-18 05:06:26.275253 7f12ef532700  1 mon.deis-1@0(leader).osd e20 e20: 3 osds: 3 up, 3 in
+Nov 18 05:06:26 deis-1 sh[1212]: 2014-11-18 05:06:26.309261 7f12ef532700  0 log_channel(cluster) log [INF] : osdmap e20: 3 osds: 3 up, 3 in
+Nov 18 05:06:26 deis-1 sh[1212]: 2014-11-18 05:06:26.334991 7f12ef532700  0 log_channel(cluster) log [INF] : pgmap v25: 320 pgs: 6 stale+peering, 256 creating, 30 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:06:27 deis-1 systemd[1]: Stopping deis-store-monitor...
+Nov 18 05:06:27 deis-1 sh[1212]: 2014-11-18 05:06:27.836929 7f12ebc2a700  0 -- 172.17.8.100:6789/0 >> 172.17.8.101:6789/0 pipe(0x4c52dc0 sd=19 :49656 s=2 pgs=4 cs=1 l=0 c=0x4c4bb80).fault with nothing to send, going to standby
+Nov 18 05:06:27 deis-1 sh[1212]: 2014-11-18 05:06:27.838664 7f12ec42b700 -1 mon.deis-1@0(leader) e3 *** Got Signal Terminated ***
+Nov 18 05:06:27 deis-1 sh[1212]: 2014-11-18 05:06:27.838693 7f12ec42b700  1 mon.deis-1@0(leader) e3 shutdown
+Nov 18 05:06:27 deis-1 sh[1212]: 2014-11-18 05:06:27.838729 7f12ec42b700  0 quorum service shutdown
+Nov 18 05:06:27 deis-1 sh[1212]: 2014-11-18 05:06:27.838731 7f12ec42b700  0 mon.deis-1@0(shutdown).health(14) HealthMonitor::service_shutdown 1 services
+Nov 18 05:06:27 deis-1 sh[1212]: 2014-11-18 05:06:27.838733 7f12ec42b700  0 quorum service shutdown
+Nov 18 05:06:28 deis-1 systemd[1]: Stopped deis-store-monitor.
+Nov 18 05:06:28 deis-1 sh[1212]: 2014/11/18 05:06:28 Error response from daemon: No such container: c50eb6d60eaf327ca1d57cd6f60ebbd6e1cf8f5857a7ee002506a1f08c7ec0c0
+Nov 18 05:06:28 deis-1 docker[1724]: deis-store-monitor
+Nov 18 05:06:50 deis-1 systemd[1]: Starting deis-store-monitor...
+Nov 18 05:06:50 deis-1 systemd[1]: Started deis-store-monitor.
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.435902 7f0bb34f58c0  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-mon, pid 1
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.483373 7f0bb34f58c0  0 starting mon.deis-1 rank 0 at 172.17.8.100:6789/0 mon_data /var/lib/ceph/mon/ceph-deis-1 fsid 297e412d-3fa8-42f2-940c-e79d252fc125
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.484793 7f0bb34f58c0  1 mon.deis-1@-1(probing) e3 preinit fsid 297e412d-3fa8-42f2-940c-e79d252fc125
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.485747 7f0bb34f58c0  1 mon.deis-1@-1(probing).paxosservice(pgmap 1..25) refresh upgraded, format 0 -> 1
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.486014 7f0bb34f58c0  1 mon.deis-1@-1(probing).pg v0 on_upgrade discarding in-core PGMap
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.489961 7f0bb34f58c0  0 mon.deis-1@-1(probing).mds e5 print_map
+Nov 18 05:06:51 deis-1 sh[1828]: epoch        5
+Nov 18 05:06:51 deis-1 sh[1828]: flags        0
+Nov 18 05:06:51 deis-1 sh[1828]: created        2014-11-18 05:06:15.379646
+Nov 18 05:06:51 deis-1 sh[1828]: modified        2014-11-18 05:06:21.384456
+Nov 18 05:06:51 deis-1 sh[1828]: tableserver        0
+Nov 18 05:06:51 deis-1 sh[1828]: root        0
+Nov 18 05:06:51 deis-1 sh[1828]: session_timeout        60
+Nov 18 05:06:51 deis-1 sh[1828]: session_autoclose        300
+Nov 18 05:06:51 deis-1 sh[1828]: max_file_size        1099511627776
+Nov 18 05:06:51 deis-1 sh[1828]: last_failure        0
+Nov 18 05:06:51 deis-1 sh[1828]: last_failure_osd_epoch        0
+Nov 18 05:06:51 deis-1 sh[1828]: compat        compat={},rocompat={},incompat={1=base v0.20,2=client writeable ranges,3=default file layouts on dirs,4=dir inode in separate object,5=mds uses versioned encoding,6=dirfrag is stored in omap,8=no anchor table}
+Nov 18 05:06:51 deis-1 sh[1828]: max_mds        1
+Nov 18 05:06:51 deis-1 sh[1828]: in        0
+Nov 18 05:06:51 deis-1 sh[1828]: up        {0=4416}
+Nov 18 05:06:51 deis-1 sh[1828]: failed
+Nov 18 05:06:51 deis-1 sh[1828]: stopped
+Nov 18 05:06:51 deis-1 sh[1828]: data_pools        1
+Nov 18 05:06:51 deis-1 sh[1828]: metadata_pool        2
+Nov 18 05:06:51 deis-1 sh[1828]: inline_data        disabled
+Nov 18 05:06:51 deis-1 sh[1828]: 4416:        172.17.8.101:6800/1 'deis-2' mds.0.1 up:creating seq 1
+Nov 18 05:06:51 deis-1 sh[1828]: 4419:        172.17.8.102:6800/1 'deis-3' mds.-1.0 up:standby seq 1
+Nov 18 05:06:51 deis-1 sh[1828]: 4428:        172.17.8.100:6800/1 'deis-1' mds.-1.0 up:standby seq 1
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.499887 7f0bb34f58c0  0 mon.deis-1@-1(probing).osd e20 crush map has features 1107558400, adjusting msgr requires
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.500549 7f0bb34f58c0  0 mon.deis-1@-1(probing).osd e20 crush map has features 1107558400, adjusting msgr requires
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.500933 7f0bb34f58c0  0 mon.deis-1@-1(probing).osd e20 crush map has features 1107558400, adjusting msgr requires
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.501346 7f0bb34f58c0  0 mon.deis-1@-1(probing).osd e20 crush map has features 1107558400, adjusting msgr requires
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.502192 7f0bb34f58c0  1 mon.deis-1@-1(probing).paxosservice(auth 1..13) refresh upgraded, format 0 -> 1
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.504278 7f0bb34f58c0  0 mon.deis-1@-1(probing) e3  my rank is now 0 (was -1)
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.507962 7f0ba9b0d700  0 -- 172.17.8.100:6789/0 >> 172.17.8.101:6789/0 pipe(0x4287080 sd=13 :6789 s=0 pgs=0 cs=0 l=0 c=0x427fce0).accept connect_seq 0 vs existing 0 state connecting
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.511896 7f0babd13700  0 log_channel(cluster) log [INF] : mon.deis-1 calling new monitor election
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.512462 7f0babd13700  1 mon.deis-1@0(electing).elector(14) init, last seen epoch 14
+Nov 18 05:06:51 deis-1 sh[1828]: 2014-11-18 05:06:51.528239 7f0ba9a0c700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:6789/0 pipe(0x4287e40 sd=13 :6789 s=0 pgs=0 cs=0 l=0 c=0x427fe40).accept connect_seq 0 vs existing 0 state connecting
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.518774 7f0bac514700  0 log_channel(cluster) log [INF] : mon.deis-1@0 won leader election with quorum 0,1
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.528668 7f0babd13700  0 log_channel(cluster) log [INF] : monmap e3: 3 mons at {deis-1=172.17.8.100:6789/0,deis-2=172.17.8.101:6789/0,deis-3=172.17.8.102:6789/0}
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.528739 7f0babd13700  0 log_channel(cluster) log [INF] : pgmap v25: 320 pgs: 6 stale+peering, 256 creating, 30 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.528790 7f0babd13700  0 log_channel(cluster) log [INF] : mdsmap e5: 1/1/1 up {0=deis-2=up:creating}, 2 up:standby
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.528891 7f0babd13700  0 log_channel(cluster) log [INF] : osdmap e20: 3 osds: 3 up, 3 in
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.529022 7f0babd13700  0 log_channel(cluster) log [WRN] : mon.1 172.17.8.101:6789/0 clock skew 0.963989s > max 0.05s
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.546186 7f0babd13700  0 log_channel(cluster) log [INF] : mon.deis-1 calling new monitor election
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.546826 7f0babd13700  1 mon.deis-1@0(electing).elector(16) init, last seen epoch 16
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.559339 7f0babd13700  0 log_channel(cluster) log [INF] : mon.deis-1@0 won leader election with quorum 0,1,2
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.569625 7f0babd13700  0 log_channel(cluster) log [WRN] : mon.2 172.17.8.102:6789/0 clock skew 0.615127s > max 0.05s
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.575439 7f0babd13700  0 log_channel(cluster) log [INF] : monmap e3: 3 mons at {deis-1=172.17.8.100:6789/0,deis-2=172.17.8.101:6789/0,deis-3=172.17.8.102:6789/0}
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.576487 7f0babd13700  0 log_channel(cluster) log [INF] : pgmap v25: 320 pgs: 6 stale+peering, 256 creating, 30 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.577464 7f0babd13700  0 log_channel(cluster) log [INF] : mdsmap e5: 1/1/1 up {0=deis-2=up:creating}, 2 up:standby
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.578324 7f0babd13700  0 log_channel(cluster) log [INF] : osdmap e20: 3 osds: 3 up, 3 in
+Nov 18 05:06:56 deis-1 sh[1828]: 2014-11-18 05:06:56.579566 7f0babd13700  0 log_channel(cluster) log [WRN] : mon.1 172.17.8.101:6789/0 clock skew 0.960895s > max 0.05s
+Nov 18 05:07:07 deis-1 sh[1828]: 2014-11-18 05:07:07.207255 7f0bad516700  1 mon.deis-1@0(leader).osd e21 e21: 3 osds: 1 up, 3 in
+Nov 18 05:07:07 deis-1 sh[1828]: 2014-11-18 05:07:07.220072 7f0bad516700  0 log_channel(cluster) log [INF] : osdmap e21: 3 osds: 1 up, 3 in
+Nov 18 05:07:07 deis-1 sh[1828]: 2014-11-18 05:07:07.236844 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v26: 320 pgs: 36 stale+peering, 256 creating, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:07:08 deis-1 sh[1828]: 2014-11-18 05:07:08.241729 7f0bad516700  1 mon.deis-1@0(leader).osd e22 e22: 3 osds: 3 up, 3 in
+Nov 18 05:07:08 deis-1 sh[1828]: 2014-11-18 05:07:08.244926 7f0bad516700  0 log_channel(cluster) log [INF] : osd.2 172.17.8.100:6800/1 boot
+Nov 18 05:07:08 deis-1 sh[1828]: 2014-11-18 05:07:08.249688 7f0bad516700  0 log_channel(cluster) log [INF] : osd.0 172.17.8.101:6800/1 boot
+Nov 18 05:07:08 deis-1 sh[1828]: 2014-11-18 05:07:08.259853 7f0bad516700  0 log_channel(cluster) log [INF] : osdmap e22: 3 osds: 3 up, 3 in
+Nov 18 05:07:08 deis-1 sh[1828]: 2014-11-18 05:07:08.296251 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v27: 320 pgs: 36 stale+peering, 256 creating, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:07:09 deis-1 sh[1828]: 2014-11-18 05:07:09.331847 7f0bad516700  1 mon.deis-1@0(leader).osd e23 e23: 3 osds: 3 up, 3 in
+Nov 18 05:07:09 deis-1 sh[1828]: 2014-11-18 05:07:09.355084 7f0bad516700  0 log_channel(cluster) log [INF] : osdmap e23: 3 osds: 3 up, 3 in
+Nov 18 05:07:09 deis-1 sh[1828]: 2014-11-18 05:07:09.501743 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v28: 320 pgs: 36 stale+peering, 256 creating, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:07:09 deis-1 sh[1828]: 2014-11-18 05:07:09.914021 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "auth get-or-create", "entity": "mds.deis-3", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]} v 0) v1
+Nov 18 05:07:09 deis-1 sh[1828]: 2014-11-18 05:07:09.914105 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4498 :/0' entity='forwarded-request' cmd=[{"prefix": "auth get-or-create", "entity": "mds.deis-3", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]}]: dispatch
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.008865 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "auth get-or-create", "entity": "mds.deis-2", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]} v 0) v1
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.008963 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000023' entity='client.admin' cmd=[{"prefix": "auth get-or-create", "entity": "mds.deis-2", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]}]: dispatch
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.039505 7f0bad516700  1 mon.deis-1@0(leader).osd e24 e24: 3 osds: 3 up, 3 in
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.050718 7f0bad516700  0 log_channel(cluster) log [INF] : osdmap e24: 3 osds: 3 up, 3 in
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.132655 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v29: 320 pgs: 36 stale+peering, 256 creating, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.148503 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "auth get-or-create", "entity": "mds.deis-1", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]} v 0) v1
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.149156 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4501 :/0' entity='forwarded-request' cmd=[{"prefix": "auth get-or-create", "entity": "mds.deis-1", "caps": ["mds", "allow", "osd", "allow *", "mon", "allow profile mds"]}]: dispatch
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.156269 7f0bad516700  1 mon.deis-1@0(leader).osd e25 e25: 3 osds: 3 up, 3 in
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.165592 7f0bad516700  0 log_channel(cluster) log [INF] : osdmap e25: 3 osds: 3 up, 3 in
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.174810 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v30: 320 pgs: 36 stale+peering, 256 creating, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.339335 7f0bad516700  1 mon.deis-1@0(leader).osd e26 e26: 3 osds: 3 up, 3 in
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.358622 7f0bad516700  0 log_channel(cluster) log [INF] : osdmap e26: 3 osds: 3 up, 3 in
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.629607 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v31: 320 pgs: 36 stale+peering, 256 creating, 28 stale+active+undersized+degraded; 0 bytes data, 11022 MB used, 21658 MB / 33052 MB avail
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.639279 7f0bad516700  0 mon.deis-1@0(leader).mds e6 print_map
+Nov 18 05:07:10 deis-1 sh[1828]: epoch        6
+Nov 18 05:07:10 deis-1 sh[1828]: flags        0
+Nov 18 05:07:10 deis-1 sh[1828]: created        2014-11-18 05:06:15.379646
+Nov 18 05:07:10 deis-1 sh[1828]: modified        2014-11-18 05:07:10.500929
+Nov 18 05:07:10 deis-1 sh[1828]: tableserver        0
+Nov 18 05:07:10 deis-1 sh[1828]: root        0
+Nov 18 05:07:10 deis-1 sh[1828]: session_timeout        60
+Nov 18 05:07:10 deis-1 sh[1828]: session_autoclose        300
+Nov 18 05:07:10 deis-1 sh[1828]: max_file_size        1099511627776
+Nov 18 05:07:10 deis-1 sh[1828]: last_failure        0
+Nov 18 05:07:10 deis-1 sh[1828]: last_failure_osd_epoch        26
+Nov 18 05:07:10 deis-1 sh[1828]: compat        compat={},rocompat={},incompat={1=base v0.20,2=client writeable ranges,3=default file layouts on dirs,4=dir inode in separate object,5=mds uses versioned encoding,6=dirfrag is stored in omap,8=no anchor table}
+Nov 18 05:07:10 deis-1 sh[1828]: max_mds        1
+Nov 18 05:07:10 deis-1 sh[1828]: in
+Nov 18 05:07:10 deis-1 sh[1828]: up        {}
+Nov 18 05:07:10 deis-1 sh[1828]: failed
+Nov 18 05:07:10 deis-1 sh[1828]: stopped
+Nov 18 05:07:10 deis-1 sh[1828]: data_pools        1
+Nov 18 05:07:10 deis-1 sh[1828]: metadata_pool        2
+Nov 18 05:07:10 deis-1 sh[1828]: inline_data        disabled
+Nov 18 05:07:10 deis-1 sh[1828]: 4509:        172.17.8.102:6805/1 'deis-3' mds.-1.0 up:standby seq 1
+Nov 18 05:07:10 deis-1 sh[1828]: 4512:        172.17.8.101:6807/1 'deis-2' mds.-1.0 up:standby seq 1
+Nov 18 05:07:10 deis-1 sh[1828]: 4515:        172.17.8.100:6805/1 'deis-1' mds.-1.0 up:standby seq 1
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.654966 7f0bad516700  0 log_channel(cluster) log [INF] : mds.? 172.17.8.102:6805/1 up:boot
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.656423 7f0bad516700  0 log_channel(cluster) log [INF] : mds.? 172.17.8.101:6807/1 up:boot
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.657934 7f0bad516700  0 log_channel(cluster) log [INF] : mds.? 172.17.8.100:6805/1 up:boot
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.658355 7f0bad516700  1 mon.deis-1@0(leader).mds e6 adding standby 172.17.8.100:6805/1 as mds.0
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.661925 7f0bad516700  0 log_channel(cluster) log [INF] : mdsmap e6: 0/0/1 up, 3 up:standby
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.666553 7f0bad516700  0 mon.deis-1@0(leader).mds e7 print_map
+Nov 18 05:07:10 deis-1 sh[1828]: epoch        7
+Nov 18 05:07:10 deis-1 sh[1828]: flags        0
+Nov 18 05:07:10 deis-1 sh[1828]: created        2014-11-18 05:06:15.379646
+Nov 18 05:07:10 deis-1 sh[1828]: modified        2014-11-18 05:07:10.659179
+Nov 18 05:07:10 deis-1 sh[1828]: tableserver        0
+Nov 18 05:07:10 deis-1 sh[1828]: root        0
+Nov 18 05:07:10 deis-1 sh[1828]: session_timeout        60
+Nov 18 05:07:10 deis-1 sh[1828]: session_autoclose        300
+Nov 18 05:07:10 deis-1 sh[1828]: max_file_size        1099511627776
+Nov 18 05:07:10 deis-1 sh[1828]: last_failure        0
+Nov 18 05:07:10 deis-1 sh[1828]: last_failure_osd_epoch        26
+Nov 18 05:07:10 deis-1 sh[1828]: compat        compat={},rocompat={},incompat={1=base v0.20,2=client writeable ranges,3=default file layouts on dirs,4=dir inode in separate object,5=mds uses versioned encoding,6=dirfrag is stored in omap,8=no anchor table}
+Nov 18 05:07:10 deis-1 sh[1828]: max_mds        1
+Nov 18 05:07:10 deis-1 sh[1828]: in        0
+Nov 18 05:07:10 deis-1 sh[1828]: up        {0=4515}
+Nov 18 05:07:10 deis-1 sh[1828]: failed
+Nov 18 05:07:10 deis-1 sh[1828]: stopped
+Nov 18 05:07:10 deis-1 sh[1828]: data_pools        1
+Nov 18 05:07:10 deis-1 sh[1828]: metadata_pool        2
+Nov 18 05:07:10 deis-1 sh[1828]: inline_data        disabled
+Nov 18 05:07:10 deis-1 sh[1828]: 4515:        172.17.8.100:6805/1 'deis-1' mds.0.2 up:creating seq 1
+Nov 18 05:07:10 deis-1 sh[1828]: 4509:        172.17.8.102:6805/1 'deis-3' mds.-1.0 up:standby seq 1
+Nov 18 05:07:10 deis-1 sh[1828]: 4512:        172.17.8.101:6807/1 'deis-2' mds.-1.0 up:standby seq 1
+Nov 18 05:07:10 deis-1 sh[1828]: 2014-11-18 05:07:10.678801 7f0bad516700  0 log_channel(cluster) log [INF] : mdsmap e7: 1/1/1 up {0=deis-1=up:creating}, 2 up:standby
+Nov 18 05:07:12 deis-1 sh[1828]: 2014-11-18 05:07:12.430380 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v32: 320 pgs: 256 creating, 36 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11033 MB used, 21644 MB / 33052 MB avail
+Nov 18 05:07:51 deis-1 sh[1828]: 2014-11-18 05:07:51.503831 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5524 MB, avail 10816 MB
+Nov 18 05:08:51 deis-1 sh[1828]: 2014-11-18 05:08:51.506466 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5524 MB, avail 10816 MB
+Nov 18 05:09:03 deis-1 sh[1828]: 2014-11-18 05:09:03.748507 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pg_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:03 deis-1 sh[1828]: 2014-11-18 05:09:03.749237 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000133' entity='client.admin' cmd=[{"var": "pg_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:03 deis-1 sh[1828]: 2014-11-18 05:09:03.856138 7f0bad516700  1 mon.deis-1@0(leader).osd e27 e27: 3 osds: 3 up, 3 in
+Nov 18 05:09:03 deis-1 sh[1828]: 2014-11-18 05:09:03.901930 7f0bad516700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000133' entity='client.admin' cmd='[{"var": "pg_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]': finished
+Nov 18 05:09:03 deis-1 sh[1828]: 2014-11-18 05:09:03.904305 7f0bad516700  0 log_channel(cluster) log [INF] : osdmap e27: 3 osds: 3 up, 3 in
+Nov 18 05:09:04 deis-1 sh[1828]: 2014-11-18 05:09:04.055783 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v34: 384 pgs: 320 creating, 36 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11119 MB used, 21578 MB / 33052 MB avail
+Nov 18 05:09:05 deis-1 sh[1828]: 2014-11-18 05:09:05.034487 7f0bad516700  1 mon.deis-1@0(leader).osd e28 e28: 3 osds: 3 up, 3 in
+Nov 18 05:09:05 deis-1 sh[1828]: 2014-11-18 05:09:05.148054 7f0bad516700  0 log_channel(cluster) log [INF] : osdmap e28: 3 osds: 3 up, 3 in
+Nov 18 05:09:05 deis-1 sh[1828]: 2014-11-18 05:09:05.196778 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v35: 384 pgs: 320 creating, 36 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11119 MB used, 21578 MB / 33052 MB avail
+Nov 18 05:09:06 deis-1 sh[1828]: 2014-11-18 05:09:06.246096 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:06 deis-1 sh[1828]: 2014-11-18 05:09:06.246726 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4519 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:09 deis-1 sh[1828]: 2014-11-18 05:09:09.859158 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v36: 384 pgs: 306 creating, 50 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11123 MB used, 21576 MB / 33052 MB avail
+Nov 18 05:09:10 deis-1 sh[1828]: 2014-11-18 05:09:10.888437 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v37: 384 pgs: 289 creating, 67 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11126 MB used, 21575 MB / 33052 MB avail
+Nov 18 05:09:11 deis-1 sh[1828]: 2014-11-18 05:09:11.543917 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:11 deis-1 sh[1828]: 2014-11-18 05:09:11.544228 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4522 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:14 deis-1 sh[1828]: 2014-11-18 05:09:14.507648 7f0ba8cff700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:0/2009028615 pipe(0x446a2c0 sd=27 :6789 s=0 pgs=0 cs=0 l=0 c=0x4656ec0).accept peer addr is really 172.17.8.102:0/2009028615 (socket is 172.17.8.102:56900/0)
+Nov 18 05:09:14 deis-1 sh[1828]: 2014-11-18 05:09:14.985086 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v38: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11127 MB used, 21575 MB / 33052 MB avail
+Nov 18 05:09:16 deis-1 sh[1828]: 2014-11-18 05:09:16.780874 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:16 deis-1 sh[1828]: 2014-11-18 05:09:16.780941 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4525 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:22 deis-1 sh[1828]: 2014-11-18 05:09:22.097840 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:22 deis-1 sh[1828]: 2014-11-18 05:09:22.097908 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4528 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:27 deis-1 sh[1828]: 2014-11-18 05:09:27.360357 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:27 deis-1 sh[1828]: 2014-11-18 05:09:27.360425 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4531 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:32 deis-1 sh[1828]: 2014-11-18 05:09:32.591088 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:32 deis-1 sh[1828]: 2014-11-18 05:09:32.591174 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4534 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:37 deis-1 sh[1828]: 2014-11-18 05:09:37.859707 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:37 deis-1 sh[1828]: 2014-11-18 05:09:37.859775 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4537 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:43 deis-1 sh[1828]: 2014-11-18 05:09:43.176920 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:43 deis-1 sh[1828]: 2014-11-18 05:09:43.177089 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4540 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:48 deis-1 sh[1828]: 2014-11-18 05:09:48.421885 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:48 deis-1 sh[1828]: 2014-11-18 05:09:48.430041 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4543 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:51 deis-1 sh[1828]: 2014-11-18 05:09:51.507519 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5526 MB, avail 10815 MB
+Nov 18 05:09:53 deis-1 sh[1828]: 2014-11-18 05:09:53.696645 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:53 deis-1 sh[1828]: 2014-11-18 05:09:53.697833 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000484' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:09:59 deis-1 sh[1828]: 2014-11-18 05:09:59.041762 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:09:59 deis-1 sh[1828]: 2014-11-18 05:09:59.043104 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000516' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:04 deis-1 sh[1828]: 2014-11-18 05:10:04.283314 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:04 deis-1 sh[1828]: 2014-11-18 05:10:04.284399 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000548' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:09 deis-1 sh[1828]: 2014-11-18 05:10:09.521581 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:09 deis-1 sh[1828]: 2014-11-18 05:10:09.522823 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000580' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:14 deis-1 sh[1828]: 2014-11-18 05:10:14.777200 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:14 deis-1 sh[1828]: 2014-11-18 05:10:14.777347 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000612' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:20 deis-1 sh[1828]: 2014-11-18 05:10:20.058907 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:20 deis-1 sh[1828]: 2014-11-18 05:10:20.066530 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000644' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:25 deis-1 sh[1828]: 2014-11-18 05:10:25.337039 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:25 deis-1 sh[1828]: 2014-11-18 05:10:25.337169 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000676' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:30 deis-1 sh[1828]: 2014-11-18 05:10:30.596775 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:30 deis-1 sh[1828]: 2014-11-18 05:10:30.597746 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000708' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:35 deis-1 sh[1828]: 2014-11-18 05:10:35.862931 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:35 deis-1 sh[1828]: 2014-11-18 05:10:35.870989 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000740' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:41 deis-1 sh[1828]: 2014-11-18 05:10:41.138977 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:41 deis-1 sh[1828]: 2014-11-18 05:10:41.140150 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000772' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:46 deis-1 sh[1828]: 2014-11-18 05:10:46.424816 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:46 deis-1 sh[1828]: 2014-11-18 05:10:46.425192 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000804' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:51 deis-1 sh[1828]: 2014-11-18 05:10:51.508986 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5526 MB, avail 10814 MB
+Nov 18 05:10:51 deis-1 sh[1828]: 2014-11-18 05:10:51.697606 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:51 deis-1 sh[1828]: 2014-11-18 05:10:51.698125 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000836' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:10:56 deis-1 sh[1828]: 2014-11-18 05:10:56.994014 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:10:56 deis-1 sh[1828]: 2014-11-18 05:10:56.996421 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000868' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:02 deis-1 sh[1828]: 2014-11-18 05:11:02.267622 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:02 deis-1 sh[1828]: 2014-11-18 05:11:02.268155 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000900' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:07 deis-1 sh[1828]: 2014-11-18 05:11:07.500006 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:07 deis-1 sh[1828]: 2014-11-18 05:11:07.501088 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000932' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:09 deis-1 sh[1828]: 2014-11-18 05:11:09.920871 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v39: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11125 MB used, 21576 MB / 33052 MB avail
+Nov 18 05:11:12 deis-1 sh[1828]: 2014-11-18 05:11:12.776275 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:12 deis-1 sh[1828]: 2014-11-18 05:11:12.777000 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000964' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:14 deis-1 sh[1828]: 2014-11-18 05:11:14.572862 7f0ba8cff700  0 -- 172.17.8.100:6789/0 >> 172.17.8.100:0/1714704381 pipe(0x446a2c0 sd=27 :6789 s=0 pgs=0 cs=0 l=0 c=0x4866f20).accept peer addr is really 172.17.8.100:0/1714704381 (socket is 172.17.8.100:50273/0)
+Nov 18 05:11:15 deis-1 sh[1828]: 2014-11-18 05:11:15.087136 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v40: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11126 MB used, 21576 MB / 33052 MB avail
+Nov 18 05:11:18 deis-1 sh[1828]: 2014-11-18 05:11:18.092852 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:18 deis-1 sh[1828]: 2014-11-18 05:11:18.096749 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1000996' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:23 deis-1 sh[1828]: 2014-11-18 05:11:23.358567 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:23 deis-1 sh[1828]: 2014-11-18 05:11:23.358684 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1001028' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:28 deis-1 sh[1828]: 2014-11-18 05:11:28.598713 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:28 deis-1 sh[1828]: 2014-11-18 05:11:28.599961 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1001060' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:33 deis-1 sh[1828]: 2014-11-18 05:11:33.847241 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:33 deis-1 sh[1828]: 2014-11-18 05:11:33.847377 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4514 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:39 deis-1 sh[1828]: 2014-11-18 05:11:39.153767 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:39 deis-1 sh[1828]: 2014-11-18 05:11:39.160374 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4517 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:44 deis-1 sh[1828]: 2014-11-18 05:11:44.515547 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:44 deis-1 sh[1828]: 2014-11-18 05:11:44.515671 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4520 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:49 deis-1 sh[1828]: 2014-11-18 05:11:49.822944 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:49 deis-1 sh[1828]: 2014-11-18 05:11:49.823061 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4523 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:11:51 deis-1 sh[1828]: 2014-11-18 05:11:51.513305 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5525 MB, avail 10815 MB
+Nov 18 05:11:55 deis-1 sh[1828]: 2014-11-18 05:11:55.100501 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:11:55 deis-1 sh[1828]: 2014-11-18 05:11:55.100621 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4526 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:00 deis-1 sh[1828]: 2014-11-18 05:12:00.412886 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:00 deis-1 sh[1828]: 2014-11-18 05:12:00.413661 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4529 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:05 deis-1 sh[1828]: 2014-11-18 05:12:05.712080 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:05 deis-1 sh[1828]: 2014-11-18 05:12:05.712149 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4532 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:11 deis-1 sh[1828]: 2014-11-18 05:12:11.007147 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:11 deis-1 sh[1828]: 2014-11-18 05:12:11.007226 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4535 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:16 deis-1 sh[1828]: 2014-11-18 05:12:16.302110 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:16 deis-1 sh[1828]: 2014-11-18 05:12:16.302689 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4538 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:21 deis-1 sh[1828]: 2014-11-18 05:12:21.555252 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:21 deis-1 sh[1828]: 2014-11-18 05:12:21.555358 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4541 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:26 deis-1 sh[1828]: 2014-11-18 05:12:26.961793 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:26 deis-1 sh[1828]: 2014-11-18 05:12:26.961878 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4544 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:32 deis-1 sh[1828]: 2014-11-18 05:12:32.242331 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:32 deis-1 sh[1828]: 2014-11-18 05:12:32.242404 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4547 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:37 deis-1 sh[1828]: 2014-11-18 05:12:37.498066 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:37 deis-1 sh[1828]: 2014-11-18 05:12:37.498187 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4550 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:42 deis-1 sh[1828]: 2014-11-18 05:12:42.763602 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:42 deis-1 sh[1828]: 2014-11-18 05:12:42.763725 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4553 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:48 deis-1 sh[1828]: 2014-11-18 05:12:48.125769 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:48 deis-1 sh[1828]: 2014-11-18 05:12:48.125904 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4556 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:51 deis-1 sh[1828]: 2014-11-18 05:12:51.515490 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5526 MB, avail 10814 MB
+Nov 18 05:12:53 deis-1 sh[1828]: 2014-11-18 05:12:53.384524 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:53 deis-1 sh[1828]: 2014-11-18 05:12:53.384845 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4559 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:12:58 deis-1 sh[1828]: 2014-11-18 05:12:58.654075 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:12:58 deis-1 sh[1828]: 2014-11-18 05:12:58.654147 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4562 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:03 deis-1 sh[1828]: 2014-11-18 05:13:03.988869 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:03 deis-1 sh[1828]: 2014-11-18 05:13:03.989003 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4565 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:09 deis-1 sh[1828]: 2014-11-18 05:13:09.301179 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:09 deis-1 sh[1828]: 2014-11-18 05:13:09.301274 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4568 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:10 deis-1 sh[1828]: 2014-11-18 05:13:10.387780 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v41: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11128 MB used, 21573 MB / 33052 MB avail
+Nov 18 05:13:14 deis-1 sh[1828]: 2014-11-18 05:13:14.561839 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:14 deis-1 sh[1828]: 2014-11-18 05:13:14.561907 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4571 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:15 deis-1 sh[1828]: 2014-11-18 05:13:15.642282 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v42: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11130 MB used, 21571 MB / 33052 MB avail
+Nov 18 05:13:19 deis-1 sh[1828]: 2014-11-18 05:13:19.831429 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:19 deis-1 sh[1828]: 2014-11-18 05:13:19.831496 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4558 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:25 deis-1 sh[1828]: 2014-11-18 05:13:25.095650 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:25 deis-1 sh[1828]: 2014-11-18 05:13:25.095721 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4561 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:30 deis-1 sh[1828]: 2014-11-18 05:13:30.335422 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:30 deis-1 sh[1828]: 2014-11-18 05:13:30.335545 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4564 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:35 deis-1 sh[1828]: 2014-11-18 05:13:35.575674 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:35 deis-1 sh[1828]: 2014-11-18 05:13:35.580719 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4567 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:40 deis-1 sh[1828]: 2014-11-18 05:13:40.872626 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:40 deis-1 sh[1828]: 2014-11-18 05:13:40.874903 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4570 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:46 deis-1 sh[1828]: 2014-11-18 05:13:46.154519 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:46 deis-1 sh[1828]: 2014-11-18 05:13:46.164980 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4573 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:51 deis-1 sh[1828]: 2014-11-18 05:13:51.400543 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:51 deis-1 sh[1828]: 2014-11-18 05:13:51.400710 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4576 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:13:51 deis-1 sh[1828]: 2014-11-18 05:13:51.518681 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5527 MB, avail 10813 MB
+Nov 18 05:13:56 deis-1 sh[1828]: 2014-11-18 05:13:56.648807 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:13:56 deis-1 sh[1828]: 2014-11-18 05:13:56.648874 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4579 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:01 deis-1 sh[1828]: 2014-11-18 05:14:01.919990 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:01 deis-1 sh[1828]: 2014-11-18 05:14:01.920289 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4582 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:07 deis-1 sh[1828]: 2014-11-18 05:14:07.181270 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:07 deis-1 sh[1828]: 2014-11-18 05:14:07.181805 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4585 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:12 deis-1 sh[1828]: 2014-11-18 05:14:12.436381 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:12 deis-1 sh[1828]: 2014-11-18 05:14:12.436482 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4588 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:17 deis-1 sh[1828]: 2014-11-18 05:14:17.667774 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:17 deis-1 sh[1828]: 2014-11-18 05:14:17.667841 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4591 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:22 deis-1 sh[1828]: 2014-11-18 05:14:22.958512 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:22 deis-1 sh[1828]: 2014-11-18 05:14:22.958610 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4594 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:31 deis-1 sh[1828]: 2014-11-18 05:14:31.240039 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:31 deis-1 sh[1828]: 2014-11-18 05:14:31.240567 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4574 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:36 deis-1 sh[1828]: 2014-11-18 05:14:36.509796 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:36 deis-1 sh[1828]: 2014-11-18 05:14:36.510267 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1002182' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:41 deis-1 sh[1828]: 2014-11-18 05:14:41.761396 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:41 deis-1 sh[1828]: 2014-11-18 05:14:41.762121 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1002214' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:47 deis-1 sh[1828]: 2014-11-18 05:14:47.021012 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:47 deis-1 sh[1828]: 2014-11-18 05:14:47.021555 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1002246' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:51 deis-1 sh[1828]: 2014-11-18 05:14:51.521161 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5528 MB, avail 10813 MB
+Nov 18 05:14:52 deis-1 sh[1828]: 2014-11-18 05:14:52.312048 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:52 deis-1 sh[1828]: 2014-11-18 05:14:52.312236 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4577 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:14:57 deis-1 sh[1828]: 2014-11-18 05:14:57.604870 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:14:57 deis-1 sh[1828]: 2014-11-18 05:14:57.606515 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4580 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:02 deis-1 sh[1828]: 2014-11-18 05:15:02.895503 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:02 deis-1 sh[1828]: 2014-11-18 05:15:02.896734 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4583 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:08 deis-1 sh[1828]: 2014-11-18 05:15:08.153618 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:08 deis-1 sh[1828]: 2014-11-18 05:15:08.155759 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4586 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:10 deis-1 sh[1828]: 2014-11-18 05:15:10.103542 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v43: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11131 MB used, 21570 MB / 33052 MB avail
+Nov 18 05:15:13 deis-1 sh[1828]: 2014-11-18 05:15:13.428055 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:13 deis-1 sh[1828]: 2014-11-18 05:15:13.428124 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4589 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:15 deis-1 sh[1828]: 2014-11-18 05:15:15.262007 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v44: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11133 MB used, 21568 MB / 33052 MB avail
+Nov 18 05:15:18 deis-1 sh[1828]: 2014-11-18 05:15:18.687326 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:18 deis-1 sh[1828]: 2014-11-18 05:15:18.687438 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4592 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:24 deis-1 sh[1828]: 2014-11-18 05:15:24.027050 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:24 deis-1 sh[1828]: 2014-11-18 05:15:24.027209 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4595 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:29 deis-1 sh[1828]: 2014-11-18 05:15:29.284021 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:29 deis-1 sh[1828]: 2014-11-18 05:15:29.285703 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4598 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:34 deis-1 sh[1828]: 2014-11-18 05:15:34.545543 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:34 deis-1 sh[1828]: 2014-11-18 05:15:34.546857 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4601 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:39 deis-1 sh[1828]: 2014-11-18 05:15:39.791152 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:39 deis-1 sh[1828]: 2014-11-18 05:15:39.791548 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4604 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:45 deis-1 sh[1828]: 2014-11-18 05:15:45.084837 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:45 deis-1 sh[1828]: 2014-11-18 05:15:45.093742 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4607 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:50 deis-1 sh[1828]: 2014-11-18 05:15:50.387801 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:50 deis-1 sh[1828]: 2014-11-18 05:15:50.387912 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4610 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:15:51 deis-1 sh[1828]: 2014-11-18 05:15:51.521951 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5529 MB, avail 10812 MB
+Nov 18 05:15:55 deis-1 sh[1828]: 2014-11-18 05:15:55.631044 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:15:55 deis-1 sh[1828]: 2014-11-18 05:15:55.631209 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4613 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:00 deis-1 sh[1828]: 2014-11-18 05:16:00.882577 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:00 deis-1 sh[1828]: 2014-11-18 05:16:00.882644 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4616 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:05 deis-1 sh[1828]: 2014-11-18 05:16:05.979229 7f0ba8cff700  0 -- 172.17.8.100:6789/0 >> 172.17.8.101:0/3498219713 pipe(0x475a840 sd=27 :6789 s=0 pgs=0 cs=0 l=0 c=0x4869860).accept peer addr is really 172.17.8.101:0/3498219713 (socket is 172.17.8.101:45474/0)
+Nov 18 05:16:06 deis-1 sh[1828]: 2014-11-18 05:16:06.151266 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:06 deis-1 sh[1828]: 2014-11-18 05:16:06.151346 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4619 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:11 deis-1 sh[1828]: 2014-11-18 05:16:11.461648 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:11 deis-1 sh[1828]: 2014-11-18 05:16:11.461770 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4622 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:16 deis-1 sh[1828]: 2014-11-18 05:16:16.707868 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:16 deis-1 sh[1828]: 2014-11-18 05:16:16.707965 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4625 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:21 deis-1 sh[1828]: 2014-11-18 05:16:21.998226 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:21 deis-1 sh[1828]: 2014-11-18 05:16:21.998291 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4628 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:27 deis-1 sh[1828]: 2014-11-18 05:16:27.280979 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:27 deis-1 sh[1828]: 2014-11-18 05:16:27.281143 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4631 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:32 deis-1 sh[1828]: 2014-11-18 05:16:32.569934 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:32 deis-1 sh[1828]: 2014-11-18 05:16:32.570058 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4634 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:37 deis-1 sh[1828]: 2014-11-18 05:16:37.829995 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:37 deis-1 sh[1828]: 2014-11-18 05:16:37.830102 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4612 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:43 deis-1 sh[1828]: 2014-11-18 05:16:43.126677 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:43 deis-1 sh[1828]: 2014-11-18 05:16:43.126836 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4615 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:48 deis-1 sh[1828]: 2014-11-18 05:16:48.381622 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:48 deis-1 sh[1828]: 2014-11-18 05:16:48.381935 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4618 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:51 deis-1 sh[1828]: 2014-11-18 05:16:51.523130 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5530 MB, avail 10811 MB
+Nov 18 05:16:53 deis-1 sh[1828]: 2014-11-18 05:16:53.618467 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:53 deis-1 sh[1828]: 2014-11-18 05:16:53.618536 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4621 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:16:58 deis-1 sh[1828]: 2014-11-18 05:16:58.849479 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:16:58 deis-1 sh[1828]: 2014-11-18 05:16:58.849783 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4624 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:04 deis-1 sh[1828]: 2014-11-18 05:17:04.183438 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:04 deis-1 sh[1828]: 2014-11-18 05:17:04.186781 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4627 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:09 deis-1 sh[1828]: 2014-11-18 05:17:09.465664 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:09 deis-1 sh[1828]: 2014-11-18 05:17:09.465816 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4630 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:10 deis-1 sh[1828]: 2014-11-18 05:17:10.549173 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v45: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11135 MB used, 21566 MB / 33052 MB avail
+Nov 18 05:17:14 deis-1 sh[1828]: 2014-11-18 05:17:14.694437 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:14 deis-1 sh[1828]: 2014-11-18 05:17:14.700218 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4633 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:15 deis-1 sh[1828]: 2014-11-18 05:17:15.779614 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v46: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11137 MB used, 21564 MB / 33052 MB avail
+Nov 18 05:17:19 deis-1 sh[1828]: 2014-11-18 05:17:19.941039 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:19 deis-1 sh[1828]: 2014-11-18 05:17:19.941138 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4636 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:25 deis-1 sh[1828]: 2014-11-18 05:17:25.235474 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:25 deis-1 sh[1828]: 2014-11-18 05:17:25.235811 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4639 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:30 deis-1 sh[1828]: 2014-11-18 05:17:30.496476 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:30 deis-1 sh[1828]: 2014-11-18 05:17:30.498732 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4642 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:35 deis-1 sh[1828]: 2014-11-18 05:17:35.748193 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:35 deis-1 sh[1828]: 2014-11-18 05:17:35.748342 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4645 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:41 deis-1 sh[1828]: 2014-11-18 05:17:41.006196 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:41 deis-1 sh[1828]: 2014-11-18 05:17:41.006277 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4648 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:46 deis-1 sh[1828]: 2014-11-18 05:17:46.264154 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:46 deis-1 sh[1828]: 2014-11-18 05:17:46.272950 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4657 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:51 deis-1 sh[1828]: 2014-11-18 05:17:51.525435 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5530 MB, avail 10810 MB
+Nov 18 05:17:51 deis-1 sh[1828]: 2014-11-18 05:17:51.549162 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:51 deis-1 sh[1828]: 2014-11-18 05:17:51.550379 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4660 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:17:56 deis-1 sh[1828]: 2014-11-18 05:17:56.781284 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:17:56 deis-1 sh[1828]: 2014-11-18 05:17:56.781371 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4663 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:02 deis-1 sh[1828]: 2014-11-18 05:18:02.026377 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:02 deis-1 sh[1828]: 2014-11-18 05:18:02.026527 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4666 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:07 deis-1 sh[1828]: 2014-11-18 05:18:07.282274 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:07 deis-1 sh[1828]: 2014-11-18 05:18:07.288936 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4669 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:12 deis-1 sh[1828]: 2014-11-18 05:18:12.564829 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:12 deis-1 sh[1828]: 2014-11-18 05:18:12.566386 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4672 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:17 deis-1 sh[1828]: 2014-11-18 05:18:17.832819 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:17 deis-1 sh[1828]: 2014-11-18 05:18:17.833821 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003526' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:23 deis-1 sh[1828]: 2014-11-18 05:18:23.125453 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:23 deis-1 sh[1828]: 2014-11-18 05:18:23.126472 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003558' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:28 deis-1 sh[1828]: 2014-11-18 05:18:28.389831 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:28 deis-1 sh[1828]: 2014-11-18 05:18:28.391010 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003590' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:33 deis-1 sh[1828]: 2014-11-18 05:18:33.630784 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:33 deis-1 sh[1828]: 2014-11-18 05:18:33.631811 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003622' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:38 deis-1 sh[1828]: 2014-11-18 05:18:38.902490 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:38 deis-1 sh[1828]: 2014-11-18 05:18:38.902644 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003654' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:44 deis-1 sh[1828]: 2014-11-18 05:18:44.242503 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:44 deis-1 sh[1828]: 2014-11-18 05:18:44.243632 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003686' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:49 deis-1 sh[1828]: 2014-11-18 05:18:49.547641 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:49 deis-1 sh[1828]: 2014-11-18 05:18:49.548762 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003718' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:18:51 deis-1 sh[1828]: 2014-11-18 05:18:51.526466 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5531 MB, avail 10810 MB
+Nov 18 05:18:54 deis-1 sh[1828]: 2014-11-18 05:18:54.795428 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:18:54 deis-1 sh[1828]: 2014-11-18 05:18:54.797069 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003750' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:00 deis-1 sh[1828]: 2014-11-18 05:19:00.059330 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:00 deis-1 sh[1828]: 2014-11-18 05:19:00.060954 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003782' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:05 deis-1 sh[1828]: 2014-11-18 05:19:05.335584 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:05 deis-1 sh[1828]: 2014-11-18 05:19:05.335705 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003814' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:10 deis-1 sh[1828]: 2014-11-18 05:19:10.266632 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v47: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11139 MB used, 21563 MB / 33052 MB avail
+Nov 18 05:19:10 deis-1 sh[1828]: 2014-11-18 05:19:10.582221 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:10 deis-1 sh[1828]: 2014-11-18 05:19:10.584827 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003846' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:15 deis-1 sh[1828]: 2014-11-18 05:19:15.433743 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v48: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11141 MB used, 21561 MB / 33052 MB avail
+Nov 18 05:19:15 deis-1 sh[1828]: 2014-11-18 05:19:15.873284 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:15 deis-1 sh[1828]: 2014-11-18 05:19:15.874309 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003878' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:21 deis-1 sh[1828]: 2014-11-18 05:19:21.152585 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:21 deis-1 sh[1828]: 2014-11-18 05:19:21.153134 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003910' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:26 deis-1 sh[1828]: 2014-11-18 05:19:26.454190 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:26 deis-1 sh[1828]: 2014-11-18 05:19:26.457501 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003942' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:31 deis-1 sh[1828]: 2014-11-18 05:19:31.754859 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:31 deis-1 sh[1828]: 2014-11-18 05:19:31.756077 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1003974' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:37 deis-1 sh[1828]: 2014-11-18 05:19:37.002803 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:37 deis-1 sh[1828]: 2014-11-18 05:19:37.009250 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1004006' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:42 deis-1 sh[1828]: 2014-11-18 05:19:42.297582 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:42 deis-1 sh[1828]: 2014-11-18 05:19:42.298582 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1004038' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:47 deis-1 sh[1828]: 2014-11-18 05:19:47.553632 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:47 deis-1 sh[1828]: 2014-11-18 05:19:47.554676 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1004070' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:51 deis-1 sh[1828]: 2014-11-18 05:19:51.527495 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5533 MB, avail 10809 MB
+Nov 18 05:19:52 deis-1 sh[1828]: 2014-11-18 05:19:52.815654 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:52 deis-1 sh[1828]: 2014-11-18 05:19:52.816708 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1004102' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:19:58 deis-1 sh[1828]: 2014-11-18 05:19:58.102861 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:19:58 deis-1 sh[1828]: 2014-11-18 05:19:58.117970 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1004134' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:03 deis-1 sh[1828]: 2014-11-18 05:20:03.412963 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:03 deis-1 sh[1828]: 2014-11-18 05:20:03.413094 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4646 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:08 deis-1 sh[1828]: 2014-11-18 05:20:08.666725 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:08 deis-1 sh[1828]: 2014-11-18 05:20:08.666845 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4649 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:13 deis-1 sh[1828]: 2014-11-18 05:20:13.967901 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:13 deis-1 sh[1828]: 2014-11-18 05:20:13.968058 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4652 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:19 deis-1 sh[1828]: 2014-11-18 05:20:19.266914 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:19 deis-1 sh[1828]: 2014-11-18 05:20:19.267069 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4655 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:24 deis-1 sh[1828]: 2014-11-18 05:20:24.522868 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:24 deis-1 sh[1828]: 2014-11-18 05:20:24.522987 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4658 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:29 deis-1 sh[1828]: 2014-11-18 05:20:29.789020 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:29 deis-1 sh[1828]: 2014-11-18 05:20:29.789075 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4661 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:35 deis-1 sh[1828]: 2014-11-18 05:20:35.078255 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:35 deis-1 sh[1828]: 2014-11-18 05:20:35.078385 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4664 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:40 deis-1 sh[1828]: 2014-11-18 05:20:40.362406 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:40 deis-1 sh[1828]: 2014-11-18 05:20:40.362693 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4667 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:45 deis-1 sh[1828]: 2014-11-18 05:20:45.617373 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:45 deis-1 sh[1828]: 2014-11-18 05:20:45.617453 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4670 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:48 deis-1 sh[1828]: 2014-11-18 05:20:48.965967 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"prefix": "osd tree"} v 0) v1
+Nov 18 05:20:48 deis-1 sh[1828]: 2014-11-18 05:20:48.966013 7f0babd13700  0 log_channel(audit) log [DBG] : from='client.? 172.17.8.100:0/1000225' entity='client.admin' cmd=[{"prefix": "osd tree"}]: dispatch
+Nov 18 05:20:50 deis-1 sh[1828]: 2014-11-18 05:20:50.855151 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:50 deis-1 sh[1828]: 2014-11-18 05:20:50.855219 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4673 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:20:51 deis-1 sh[1828]: 2014-11-18 05:20:51.528596 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5534 MB, avail 10808 MB
+Nov 18 05:20:53 deis-1 sh[1828]: 2014-11-18 05:20:53.089635 7f0ba8cff700  0 -- 172.17.8.100:6789/0 >> 172.17.8.102:0/3146556009 pipe(0x4c4d9c0 sd=27 :6789 s=0 pgs=0 cs=0 l=0 c=0x4dd9440).accept peer addr is really 172.17.8.102:0/3146556009 (socket is 172.17.8.102:57979/0)
+Nov 18 05:20:56 deis-1 sh[1828]: 2014-11-18 05:20:56.164371 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:20:56 deis-1 sh[1828]: 2014-11-18 05:20:56.164468 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4682 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:01 deis-1 sh[1828]: 2014-11-18 05:21:01.457379 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:01 deis-1 sh[1828]: 2014-11-18 05:21:01.457541 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4685 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:06 deis-1 sh[1828]: 2014-11-18 05:21:06.719839 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:06 deis-1 sh[1828]: 2014-11-18 05:21:06.721795 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4688 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:10 deis-1 sh[1828]: 2014-11-18 05:21:10.334864 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v49: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11143 MB used, 21559 MB / 33052 MB avail
+Nov 18 05:21:11 deis-1 sh[1828]: 2014-11-18 05:21:11.996805 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:11 deis-1 sh[1828]: 2014-11-18 05:21:11.996940 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4691 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:15 deis-1 sh[1828]: 2014-11-18 05:21:15.556684 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v50: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11146 MB used, 21557 MB / 33052 MB avail
+Nov 18 05:21:17 deis-1 sh[1828]: 2014-11-18 05:21:17.344466 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:17 deis-1 sh[1828]: 2014-11-18 05:21:17.344532 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4694 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:22 deis-1 sh[1828]: 2014-11-18 05:21:22.595569 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:22 deis-1 sh[1828]: 2014-11-18 05:21:22.598100 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4697 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:27 deis-1 sh[1828]: 2014-11-18 05:21:27.854442 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:27 deis-1 sh[1828]: 2014-11-18 05:21:27.854566 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4700 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:33 deis-1 sh[1828]: 2014-11-18 05:21:33.151196 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:33 deis-1 sh[1828]: 2014-11-18 05:21:33.151327 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4703 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:38 deis-1 sh[1828]: 2014-11-18 05:21:38.500715 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:38 deis-1 sh[1828]: 2014-11-18 05:21:38.500832 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4706 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:43 deis-1 sh[1828]: 2014-11-18 05:21:43.748854 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:43 deis-1 sh[1828]: 2014-11-18 05:21:43.749840 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4687 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:49 deis-1 sh[1828]: 2014-11-18 05:21:49.066915 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:49 deis-1 sh[1828]: 2014-11-18 05:21:49.067078 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4690 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:51 deis-1 sh[1828]: 2014-11-18 05:21:51.536491 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5535 MB, avail 10807 MB
+Nov 18 05:21:54 deis-1 sh[1828]: 2014-11-18 05:21:54.340790 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:54 deis-1 sh[1828]: 2014-11-18 05:21:54.340963 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4693 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:21:59 deis-1 sh[1828]: 2014-11-18 05:21:59.588704 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:21:59 deis-1 sh[1828]: 2014-11-18 05:21:59.593538 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4696 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:04 deis-1 sh[1828]: 2014-11-18 05:22:04.835493 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:04 deis-1 sh[1828]: 2014-11-18 05:22:04.835783 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4699 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:10 deis-1 sh[1828]: 2014-11-18 05:22:10.101067 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:10 deis-1 sh[1828]: 2014-11-18 05:22:10.101153 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4702 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:15 deis-1 sh[1828]: 2014-11-18 05:22:15.369100 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:15 deis-1 sh[1828]: 2014-11-18 05:22:15.369256 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4705 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:20 deis-1 sh[1828]: 2014-11-18 05:22:20.604932 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:20 deis-1 sh[1828]: 2014-11-18 05:22:20.606656 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4708 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:25 deis-1 sh[1828]: 2014-11-18 05:22:25.846742 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:25 deis-1 sh[1828]: 2014-11-18 05:22:25.846897 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4711 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:28 deis-1 sh[1828]: 2014-11-18 05:22:28.308654 7f0ba8afd700  0 -- 172.17.8.100:6789/0 >> 172.17.8.100:0/3444495486 pipe(0x475a840 sd=28 :6789 s=0 pgs=0 cs=0 l=0 c=0x4dd92e0).accept peer addr is really 172.17.8.100:0/3444495486 (socket is 172.17.8.100:51414/0)
+Nov 18 05:22:31 deis-1 sh[1828]: 2014-11-18 05:22:31.113980 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:31 deis-1 sh[1828]: 2014-11-18 05:22:31.114149 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4714 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:36 deis-1 sh[1828]: 2014-11-18 05:22:36.353939 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:36 deis-1 sh[1828]: 2014-11-18 05:22:36.354070 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4717 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:41 deis-1 sh[1828]: 2014-11-18 05:22:41.618407 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:41 deis-1 sh[1828]: 2014-11-18 05:22:41.629427 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4720 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:46 deis-1 sh[1828]: 2014-11-18 05:22:46.889995 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:46 deis-1 sh[1828]: 2014-11-18 05:22:46.893476 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4723 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:51 deis-1 sh[1828]: 2014-11-18 05:22:51.537470 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5536 MB, avail 10806 MB
+Nov 18 05:22:52 deis-1 sh[1828]: 2014-11-18 05:22:52.173691 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:52 deis-1 sh[1828]: 2014-11-18 05:22:52.173821 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4726 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:22:57 deis-1 sh[1828]: 2014-11-18 05:22:57.442077 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:22:57 deis-1 sh[1828]: 2014-11-18 05:22:57.442145 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4729 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:02 deis-1 sh[1828]: 2014-11-18 05:23:02.675191 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:02 deis-1 sh[1828]: 2014-11-18 05:23:02.676861 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4732 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:07 deis-1 sh[1828]: 2014-11-18 05:23:07.915545 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:07 deis-1 sh[1828]: 2014-11-18 05:23:07.915616 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4735 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:10 deis-1 sh[1828]: 2014-11-18 05:23:10.443284 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v51: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11147 MB used, 21556 MB / 33052 MB avail
+Nov 18 05:23:13 deis-1 sh[1828]: 2014-11-18 05:23:13.199260 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:13 deis-1 sh[1828]: 2014-11-18 05:23:13.199362 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4738 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:15 deis-1 sh[1828]: 2014-11-18 05:23:15.646021 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v52: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11149 MB used, 21554 MB / 33052 MB avail
+Nov 18 05:23:18 deis-1 sh[1828]: 2014-11-18 05:23:18.432646 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:18 deis-1 sh[1828]: 2014-11-18 05:23:18.432742 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4741 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:23 deis-1 sh[1828]: 2014-11-18 05:23:23.670158 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:23 deis-1 sh[1828]: 2014-11-18 05:23:23.670690 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4744 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:28 deis-1 sh[1828]: 2014-11-18 05:23:28.932415 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:28 deis-1 sh[1828]: 2014-11-18 05:23:28.933476 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005414' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:34 deis-1 sh[1828]: 2014-11-18 05:23:34.276740 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:34 deis-1 sh[1828]: 2014-11-18 05:23:34.277761 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005446' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:39 deis-1 sh[1828]: 2014-11-18 05:23:39.536164 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:39 deis-1 sh[1828]: 2014-11-18 05:23:39.537415 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005478' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:44 deis-1 sh[1828]: 2014-11-18 05:23:44.799837 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:44 deis-1 sh[1828]: 2014-11-18 05:23:44.805031 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005510' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:50 deis-1 sh[1828]: 2014-11-18 05:23:50.090743 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:50 deis-1 sh[1828]: 2014-11-18 05:23:50.097808 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005542' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:23:51 deis-1 sh[1828]: 2014-11-18 05:23:51.542565 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5537 MB, avail 10805 MB
+Nov 18 05:23:55 deis-1 sh[1828]: 2014-11-18 05:23:55.367492 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:23:55 deis-1 sh[1828]: 2014-11-18 05:23:55.367622 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005574' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:00 deis-1 sh[1828]: 2014-11-18 05:24:00.648855 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:00 deis-1 sh[1828]: 2014-11-18 05:24:00.650190 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005606' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:02 deis-1 sh[1828]: 2014-11-18 05:24:02.733556 7f0ba8cff700  0 -- 172.17.8.100:6789/0 >> 172.17.8.101:0/3288902960 pipe(0x51b7b80 sd=27 :6789 s=0 pgs=0 cs=0 l=0 c=0x50806e0).accept peer addr is really 172.17.8.101:0/3288902960 (socket is 172.17.8.101:46048/0)
+Nov 18 05:24:05 deis-1 sh[1828]: 2014-11-18 05:24:05.904298 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:05 deis-1 sh[1828]: 2014-11-18 05:24:05.910745 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005638' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:11 deis-1 sh[1828]: 2014-11-18 05:24:11.184595 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:11 deis-1 sh[1828]: 2014-11-18 05:24:11.185813 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005670' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:16 deis-1 sh[1828]: 2014-11-18 05:24:16.456942 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:16 deis-1 sh[1828]: 2014-11-18 05:24:16.457059 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005702' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:21 deis-1 sh[1828]: 2014-11-18 05:24:21.696316 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:21 deis-1 sh[1828]: 2014-11-18 05:24:21.703165 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005734' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:27 deis-1 sh[1828]: 2014-11-18 05:24:26.999950 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:27 deis-1 sh[1828]: 2014-11-18 05:24:27.001176 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005766' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:32 deis-1 sh[1828]: 2014-11-18 05:24:32.272549 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:32 deis-1 sh[1828]: 2014-11-18 05:24:32.279738 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005798' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:37 deis-1 sh[1828]: 2014-11-18 05:24:37.602797 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:37 deis-1 sh[1828]: 2014-11-18 05:24:37.603760 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005830' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:42 deis-1 sh[1828]: 2014-11-18 05:24:42.854689 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:42 deis-1 sh[1828]: 2014-11-18 05:24:42.854813 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005862' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:48 deis-1 sh[1828]: 2014-11-18 05:24:48.118843 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:48 deis-1 sh[1828]: 2014-11-18 05:24:48.119304 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005894' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:51 deis-1 sh[1828]: 2014-11-18 05:24:51.543605 7f0bac514700  0 mon.deis-1@0(leader).data_health(18) update_stats avail 65% total 16526 MB, used 5537 MB, avail 10805 MB
+Nov 18 05:24:53 deis-1 sh[1828]: 2014-11-18 05:24:53.392432 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:53 deis-1 sh[1828]: 2014-11-18 05:24:53.392503 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005926' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:24:58 deis-1 sh[1828]: 2014-11-18 05:24:58.651153 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:24:58 deis-1 sh[1828]: 2014-11-18 05:24:58.652167 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005958' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:25:03 deis-1 sh[1828]: 2014-11-18 05:25:03.889718 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:25:03 deis-1 sh[1828]: 2014-11-18 05:25:03.890443 7f0babd13700  0 log_channel(audit) log [INF] : from='client.? 172.17.8.101:0/1005990' entity='client.admin' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:25:09 deis-1 sh[1828]: 2014-11-18 05:25:09.207621 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:25:09 deis-1 sh[1828]: 2014-11-18 05:25:09.207779 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4718 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:25:10 deis-1 sh[1828]: 2014-11-18 05:25:10.538345 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v53: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11151 MB used, 21552 MB / 33052 MB avail
+Nov 18 05:25:14 deis-1 sh[1828]: 2014-11-18 05:25:14.456793 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:25:14 deis-1 sh[1828]: 2014-11-18 05:25:14.456889 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4721 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch
+Nov 18 05:25:15 deis-1 sh[1828]: 2014-11-18 05:25:15.712157 7f0bad516700  0 log_channel(cluster) log [INF] : pgmap v54: 384 pgs: 284 creating, 72 peering, 28 stale+active+undersized+degraded; 0 bytes data, 11153 MB used, 21550 MB / 33052 MB avail
+Nov 18 05:25:19 deis-1 sh[1828]: 2014-11-18 05:25:19.729301 7f0babd13700  0 mon.deis-1@0(leader) e3 handle_command mon_command({"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"} v 0) v1
+Nov 18 05:25:19 deis-1 sh[1828]: 2014-11-18 05:25:19.729357 7f0babd13700  0 log_channel(audit) log [INF] : from='client.4724 :/0' entity='forwarded-request' cmd=[{"var": "pgp_num", "prefix": "osd pool set", "pool": "rbd", "val": "128"}]: dispatch

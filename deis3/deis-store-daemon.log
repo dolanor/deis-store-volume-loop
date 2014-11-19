@@ -1,0 +1,97 @@
+Nov 18 04:50:36 deis-3 systemd[1]: Starting deis-store-daemon...
+Nov 18 04:50:37 deis-3 sh[1652]: Pulling repository deis/store-daemon
+Nov 18 04:50:58 deis-3 sh[1652]: Status: Downloaded newer image for deis/store-daemon:v1.0.1
+Nov 18 04:51:08 deis-3 systemd[1]: Started deis-store-daemon.
+Nov 18 04:51:09 deis-3 sh[1711]: store-daemon: creating OSD...
+Nov 18 04:51:22 deis-3 sh[1711]: store-daemon: created OSD 1
+Nov 18 04:51:23 deis-3 sh[1711]: store-daemon: OSD not yet initialized. Initializing...
+Nov 18 04:51:23 deis-3 sh[1711]: 2014-11-18 04:51:23.564971 7fb5eac61900  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-osd, pid 67
+Nov 18 04:51:23 deis-3 sh[1711]: 2014-11-18 04:51:23.587593 7fb5eac61900  1 filestore(/var/lib/ceph/osd/ceph-1) mkfs in /var/lib/ceph/osd/ceph-1
+Nov 18 04:51:23 deis-3 sh[1711]: 2014-11-18 04:51:23.587845 7fb5eac61900  1 filestore(/var/lib/ceph/osd/ceph-1) mkfs generated fsid e7da7ac8-1da9-46c5-b9ec-c8c9168fa592
+Nov 18 04:51:23 deis-3 sh[1711]: 2014-11-18 04:51:23.631944 7fb5eac61900  0 filestore(/var/lib/ceph/osd/ceph-1) backend btrfs (magic 0x9123683e)
+Nov 18 04:51:23 deis-3 sh[1711]: 2014-11-18 04:51:23.747531 7fb5eac61900  1 filestore(/var/lib/ceph/osd/ceph-1) leveldb db exists/created
+Nov 18 04:51:23 deis-3 sh[1711]: 2014-11-18 04:51:23.747713 7fb5eac61900 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+Nov 18 04:51:23 deis-3 sh[1711]: 2014-11-18 04:51:23.750858 7fb5eac61900  1 journal _open /var/lib/ceph/osd/ceph-1/journal fd 10: 5368709120 bytes, block size 4096 bytes, directio = 1, aio = 0
+Nov 18 04:51:23 deis-3 sh[1711]: 2014-11-18 04:51:23.747713 7fb5eac61900 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.008929 7fb5eac61900  0 filestore(/var/lib/ceph/osd/ceph-1) mkjournal created journal on /var/lib/ceph/osd/ceph-1/journal
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.008954 7fb5eac61900  1 filestore(/var/lib/ceph/osd/ceph-1) mkfs done in /var/lib/ceph/osd/ceph-1
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.009052 7fb5eac61900  0 filestore(/var/lib/ceph/osd/ceph-1) backend btrfs (magic 0x9123683e)
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.071329 7fb5eac61900  0 genericfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_features: FIEMAP ioctl is supported and appears to work
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.071410 7fb5eac61900  0 genericfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_features: FIEMAP ioctl is disabled via 'filestore fiemap' config option
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.493092 7fb5eac61900  0 genericfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_features: syncfs(2) syscall fully supported (by glibc and kernel)
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.494571 7fb5eac61900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: CLONE_RANGE ioctl is supported
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.564943 7fb5eac61900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_CREATE is supported
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.565030 7fb5eac61900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_DESTROY failed: (1) Operation not permitted
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.565091 7fb5eac61900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: snaps enabled, but no SNAP_DESTROY ioctl; DISABLING
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.565123 7fb5eac61900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: START_SYNC is supported (transid 92)
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.565153 7fb5eac61900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: WAIT_SYNC is supported
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.601292 7fb5eac61900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_CREATE_V2 is supported
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.601382 7fb5eac61900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_DESTROY failed: (1) Operation not permitted
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.601835 7fb5eac61900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: failed to remove test_subvol: (1) Operation not permitted
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.631431 7fb5eac61900  0 filestore(/var/lib/ceph/osd/ceph-1) mount: enabling WRITEAHEAD journal mode: checkpoint is not enabled
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.631906 7fb5eac61900 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.634935 7fb5eac61900  1 journal _open /var/lib/ceph/osd/ceph-1/journal fd 16: 5368709120 bytes, block size 4096 bytes, directio = 1, aio = 0
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.641620 7fb5eac61900  1 journal _open /var/lib/ceph/osd/ceph-1/journal fd 16: 5368709120 bytes, block size 4096 bytes, directio = 1, aio = 0
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.642044 7fb5eac61900 -1 filestore(/var/lib/ceph/osd/ceph-1) could not find 23c2fcde/osd_superblock/0//-1 in index: (2) No such file or directory
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.631906 7fb5eac61900 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.838479 7fb5eac61900  1 journal close /var/lib/ceph/osd/ceph-1/journal
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.841990 7fb5eac61900 -1 created object store /var/lib/ceph/osd/ceph-1 journal /var/lib/ceph/osd/ceph-1/journal for osd.1 fsid 297e412d-3fa8-42f2-940c-e79d252fc125
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.642044 7fb5eac61900 -1 filestore(/var/lib/ceph/osd/ceph-1) could not find 23c2fcde/osd_superblock/0//-1 in index: (2) No such file or directory
+Nov 18 04:51:24 deis-3 sh[1711]: 2014-11-18 04:51:24.841990 7fb5eac61900 -1 created object store /var/lib/ceph/osd/ceph-1 journal /var/lib/ceph/osd/ceph-1/journal for osd.1 fsid 297e412d-3fa8-42f2-940c-e79d252fc125
+Nov 18 04:51:45 deis-3 sh[1711]: add item id 1 name 'osd.1' weight 1 at location {host=deis-3,root=default} to crush map
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.147987 7fdac0141900  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-osd, pid 1
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.166701 7fdac0141900  0 filestore(/var/lib/ceph/osd/ceph-1) backend btrfs (magic 0x9123683e)
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.186006 7fdac0141900  0 genericfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_features: FIEMAP ioctl is supported and appears to work
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.186024 7fdac0141900  0 genericfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_features: FIEMAP ioctl is disabled via 'filestore fiemap' config option
+Nov 18 04:51:45 deis-3 sh[1711]: store-daemon: starting daemon on deis-3...
+Nov 18 04:51:45 deis-3 sh[1711]: starting osd.1 at :/0 osd_data /var/lib/ceph/osd/ceph-1 /var/lib/ceph/osd/ceph-1/journal
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.676600 7fdac0141900  0 genericfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_features: syncfs(2) syscall fully supported (by glibc and kernel)
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.677494 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: CLONE_RANGE ioctl is supported
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.679209 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: failed to create simple subvolume test_subvol: (17) File exists
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.679609 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_CREATE is supported
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.679619 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_DESTROY failed: (1) Operation not permitted
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.679632 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: snaps enabled, but no SNAP_DESTROY ioctl; DISABLING
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.679806 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: START_SYNC is supported (transid 99)
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.699811 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: WAIT_SYNC is supported
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.699874 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: removing old async_snap_test
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.699934 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: failed to remove old async_snap_test: (1) Operation not permitted
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.699964 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_CREATE_V2 is supported
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.699969 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_DESTROY failed: (1) Operation not permitted
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.699979 7fdac0141900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: failed to remove test_subvol: (1) Operation not permitted
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.879054 7fdac0141900  0 filestore(/var/lib/ceph/osd/ceph-1) mount: enabling WRITEAHEAD journal mode: checkpoint is not enabled
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.879569 7fdac0141900 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.879574 7fdac0141900  1 journal _open /var/lib/ceph/osd/ceph-1/journal fd 19: 5368709120 bytes, block size 4096 bytes, directio = 1, aio = 0
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.882013 7fdac0141900  1 journal _open /var/lib/ceph/osd/ceph-1/journal fd 19: 5368709120 bytes, block size 4096 bytes, directio = 1, aio = 0
+Nov 18 04:51:45 deis-3 sh[1711]: 2014-11-18 04:51:45.885676 7fdac0141900  1 journal close /var/lib/ceph/osd/ceph-1/journal
+-- Reboot --
+Nov 18 05:06:09 deis-3 systemd[1]: Starting deis-store-daemon...
+Nov 18 05:06:27 deis-3 systemd[1]: Stopping deis-store-daemon...
+Nov 18 05:06:27 deis-3 systemd[1]: Stopped deis-store-daemon.
+Nov 18 05:06:27 deis-3 docker[1373]: Error response from daemon: No such container: deis-store-daemon
+Nov 18 05:06:27 deis-3 docker[1373]: 2014/11/18 05:06:27 Error: failed to remove one or more containers
+Nov 18 05:06:54 deis-3 systemd[1]: Starting deis-store-daemon...
+Nov 18 05:07:04 deis-3 systemd[1]: Started deis-store-daemon.
+Nov 18 05:07:04 deis-3 sh[1585]: store-daemon: starting daemon on deis-3...
+Nov 18 05:07:04 deis-3 sh[1585]: starting osd.1 at :/0 osd_data /var/lib/ceph/osd/ceph-1 /var/lib/ceph/osd/ceph-1/journal
+Nov 18 05:07:04 deis-3 sh[1585]: 2014-11-18 05:07:04.965141 7ff6c4683900  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-osd, pid 1
+Nov 18 05:07:04 deis-3 sh[1585]: 2014-11-18 05:07:04.989356 7ff6c4683900  0 filestore(/var/lib/ceph/osd/ceph-1) backend btrfs (magic 0x9123683e)
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.003679 7ff6c4683900  0 genericfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_features: FIEMAP ioctl is supported and appears to work
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.008420 7ff6c4683900  0 genericfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_features: FIEMAP ioctl is disabled via 'filestore fiemap' config option
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.096110 7ff6c4683900  0 genericfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_features: syncfs(2) syscall fully supported (by glibc and kernel)
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.097447 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: CLONE_RANGE ioctl is supported
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.100604 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: failed to create simple subvolume test_subvol: (17) File exists
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.107926 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_CREATE is supported
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.109256 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_DESTROY failed: (1) Operation not permitted
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.109659 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: snaps enabled, but no SNAP_DESTROY ioctl; DISABLING
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.113177 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: START_SYNC is supported (transid 116)
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.122094 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: WAIT_SYNC is supported
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.129552 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: removing old async_snap_test
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.130018 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: failed to remove old async_snap_test: (1) Operation not permitted
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.130826 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_CREATE_V2 is supported
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.131435 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: SNAP_DESTROY failed: (1) Operation not permitted
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.132137 7ff6c4683900  0 btrfsfilestorebackend(/var/lib/ceph/osd/ceph-1) detect_feature: failed to remove test_subvol: (1) Operation not permitted
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.146458 7ff6c4683900  0 filestore(/var/lib/ceph/osd/ceph-1) mount: enabling WRITEAHEAD journal mode: checkpoint is not enabled
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.149152 7ff6c4683900 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.149443 7ff6c4683900  1 journal _open /var/lib/ceph/osd/ceph-1/journal fd 19: 5368709120 bytes, block size 4096 bytes, directio = 1, aio = 0
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.611807 7ff6c4683900  1 journal _open /var/lib/ceph/osd/ceph-1/journal fd 19: 5368709120 bytes, block size 4096 bytes, directio = 1, aio = 0
+Nov 18 05:07:05 deis-3 sh[1585]: 2014-11-18 05:07:05.654627 7ff6c4683900  1 journal close /var/lib/ceph/osd/ceph-1/journal

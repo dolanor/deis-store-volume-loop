@@ -1,0 +1,37 @@
+Nov 18 04:51:14 deis-3 systemd[1]: Starting deis-store-metadata...
+Nov 18 04:51:16 deis-3 sh[1777]: Pulling repository deis/store-metadata
+Nov 18 04:51:36 deis-3 sh[1777]: Status: Downloaded newer image for deis/store-metadata:v1.0.1
+Nov 18 04:51:36 deis-3 systemd[1]: Started deis-store-metadata.
+Nov 18 04:51:48 deis-3 sh[1949]: store-metadata: The Ceph filesystem hasn't been created. Trying to obtain the lock to set up...
+Nov 18 04:51:52 deis-3 sh[1949]: Error:  100: Key not found (/deis/store/filesystemSetupLock) [4927]
+Nov 18 04:51:52 deis-3 sh[1949]: store-metadata: waiting for another metadata to complete setup...
+-- Reboot --
+Nov 18 05:06:09 deis-3 systemd[1]: Starting deis-store-metadata...
+Nov 18 05:06:10 deis-3 sh[886]: deis-store-metadata
+Nov 18 05:06:10 deis-3 systemd[1]: Started deis-store-metadata.
+Nov 18 05:06:11 deis-3 sh[985]: store-metadata: The Ceph filesystem hasn't been created. Trying to obtain the lock to set up...
+Nov 18 05:06:12 deis-3 sh[985]: store-metadata: waiting for another metadata to complete setup...
+Nov 18 05:06:17 deis-3 sh[985]: store-metadata: running...
+Nov 18 05:06:18 deis-3 sh[985]: starting mds.deis-3 at :/0
+Nov 18 05:06:18 deis-3 sh[985]: 2014-11-18 05:06:18.054282 7f0f7cff0800  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-mds, pid 1
+Nov 18 05:06:18 deis-3 sh[985]: 2014-11-18 05:06:18.969334 7f0f773dc700  1 mds.-1.0 handle_mds_map standby
+Nov 18 05:06:19 deis-3 sh[985]: 2014-11-18 05:06:19.057503 7f0f722d1700  0 auth: do not have service osd, i am mds
+Nov 18 05:06:19 deis-3 sh[985]: 2014-11-18 05:06:19.057948 7f0f722d1700  0 cephx: verify_authorizer could not get service secret for service osd secret_id=2
+Nov 18 05:06:19 deis-3 sh[985]: 2014-11-18 05:06:19.058119 7f0f722d1700  0 -- 172.17.8.102:6800/1 >> 172.17.8.101:6800/1 pipe(0x4709340 sd=16 :6800 s=0 pgs=0 cs=0 l=0 c=0x46fa260).accept: got bad authorizer
+Nov 18 05:06:20 deis-3 sh[985]: 2014-11-18 05:06:20.783000 7f0f773dc700  1 mds.-1.0 handle_mds_map standby
+Nov 18 05:06:22 deis-3 sh[985]: 2014-11-18 05:06:22.263257 7f0f722d1700  0 auth: do not have service osd, i am mds
+Nov 18 05:06:22 deis-3 sh[985]: 2014-11-18 05:06:22.263361 7f0f722d1700  0 cephx: verify_authorizer could not get service secret for service osd secret_id=2
+Nov 18 05:06:22 deis-3 sh[985]: 2014-11-18 05:06:22.263431 7f0f722d1700  0 -- 172.17.8.102:6800/1 >> 172.17.8.101:6800/1 pipe(0x47098c0 sd=16 :6800 s=0 pgs=0 cs=0 l=0 c=0x46fa3c0).accept: got bad authorizer
+Nov 18 05:06:27 deis-3 sh[985]: 2014-11-18 05:06:27.224499 7f0f773dc700  0 monclient: hunting for new mon
+Nov 18 05:06:27 deis-3 systemd[1]: Stopping deis-store-metadata...
+Nov 18 05:06:27 deis-3 sh[985]: 2014-11-18 05:06:27.307734 7f0f72ad2700 -1 mds.-1.0 *** got signal Terminated ***
+Nov 18 05:06:27 deis-3 sh[985]: 2014-11-18 05:06:27.307784 7f0f72ad2700  1 mds.-1.0 suicide.  wanted down:dne, now up:standby
+Nov 18 05:06:27 deis-3 systemd[1]: Stopped deis-store-metadata.
+Nov 18 05:06:27 deis-3 docker[1375]: deis-store-metadata
+Nov 18 05:07:08 deis-3 systemd[1]: Starting deis-store-metadata...
+Nov 18 05:07:08 deis-3 systemd[1]: Started deis-store-metadata.
+Nov 18 05:07:09 deis-3 sh[1793]: store-metadata: running...
+Nov 18 05:07:09 deis-3 sh[1793]: starting mds.deis-3 at :/0
+Nov 18 05:07:09 deis-3 sh[1793]: 2014-11-18 05:07:09.391449 7fbac2097800  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-mds, pid 1
+Nov 18 05:07:10 deis-3 sh[1793]: 2014-11-18 05:07:10.035949 7fbabc483700  1 mds.-1.0 handle_mds_map standby
+Nov 18 05:07:10 deis-3 sh[1793]: 2014-11-18 05:07:10.054999 7fbabc483700  1 mds.-1.0 handle_mds_map standby

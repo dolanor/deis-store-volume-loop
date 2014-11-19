@@ -1,0 +1,269 @@
+-- Logs begin at Tue 2014-11-18 04:29:02 UTC, end at Tue 2014-11-18 05:25:19 UTC. --
+Nov 18 04:29:14 deis-1 systemd[1]: Starting fleet daemon...
+Nov 18 04:29:14 deis-1 systemd[1]: Started fleet daemon.
+Nov 18 04:29:14 deis-1 fleetd[949]: INFO fleet.go:144: No provided or default config file found - proceeding without
+Nov 18 04:29:14 deis-1 fleetd[949]: INFO server.go:137: Establishing etcd connectivity
+Nov 18 04:29:14 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 04:29:14 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 100ms
+Nov 18 04:29:15 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 04:29:15 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 200ms
+Nov 18 04:29:15 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 04:29:15 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 400ms
+Nov 18 04:29:15 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 04:29:15 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 800ms
+Nov 18 04:29:16 deis-1 fleetd[949]: INFO server.go:148: Starting server components
+Nov 18 04:29:16 deis-1 fleetd[949]: INFO engine.go:123: Updated cluster engine version from 0 to 1
+Nov 18 04:29:16 deis-1 fleetd[949]: INFO engine.go:149: Engine leadership acquired
+Nov 18 04:34:18 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: unexpected EOF
+Nov 18 04:34:18 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Watch /_coreos.com/fleet/job}, retrying in 100ms
+Nov 18 04:34:18 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: unexpected EOF
+Nov 18 04:34:18 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Watch /_coreos.com/fleet/job}, retrying in 100ms
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-store-metadata.service (683b)
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-store-monitor.service (1034b)
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-store-metadata.service reason="unit scheduled here but not loaded"
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-store-volume.service (870b)
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-store-monitor.service reason="unit scheduled here but not loaded"
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-store-daemon.service (943b)
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-store-volume.service reason="unit scheduled here but not loaded"
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:35:48 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-store-daemon.service reason="unit scheduled here but not loaded"
+Nov 18 04:35:49 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-store-gateway.service) to Machine(7852f9a5dcb74d50ae14328d5d2d91c0)
+Nov 18 04:35:49 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-store-gateway.service, MachineID: 7852f9a5dcb74d50ae14328d5d2d91c0, Reason: "target state loaded and unit not scheduled"}
+Nov 18 04:35:50 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-store-gateway.service (700b)
+Nov 18 04:35:50 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:35:50 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-store-gateway.service reason="unit scheduled here but not loaded"
+Nov 18 04:35:55 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-logger.service) to Machine(8215a5969c244c06b3e53f3881de6c49)
+Nov 18 04:35:55 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-logger.service, MachineID: 8215a5969c244c06b3e53f3881de6c49, Reason: "target state loaded and unit not scheduled"}
+Nov 18 04:35:55 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-logspout.service (776b)
+Nov 18 04:35:55 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:35:55 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-logspout.service reason="unit scheduled here but not loaded"
+Nov 18 04:35:59 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-cache.service) to Machine(99530c502c00484bb109cb686aafd03b)
+Nov 18 04:35:59 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-cache.service, MachineID: 99530c502c00484bb109cb686aafd03b, Reason: "target state loaded and unit not scheduled"}
+Nov 18 04:35:59 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-controller.service) to Machine(7852f9a5dcb74d50ae14328d5d2d91c0)
+Nov 18 04:35:59 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-controller.service, MachineID: 7852f9a5dcb74d50ae14328d5d2d91c0, Reason: "target state loaded and unit not scheduled"}
+Nov 18 04:36:00 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-database.service) to Machine(8215a5969c244c06b3e53f3881de6c49)
+Nov 18 04:36:00 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-database.service, MachineID: 8215a5969c244c06b3e53f3881de6c49, Reason: "target state loaded and unit not scheduled"}
+Nov 18 04:36:00 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-registry.service) to Machine(99530c502c00484bb109cb686aafd03b)
+Nov 18 04:36:00 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-registry.service, MachineID: 99530c502c00484bb109cb686aafd03b, Reason: "target state loaded and unit not scheduled"}
+Nov 18 04:36:00 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-controller.service (786b)
+Nov 18 04:36:00 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:36:00 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-builder.service) to Machine(7852f9a5dcb74d50ae14328d5d2d91c0)
+Nov 18 04:36:00 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-builder.service, MachineID: 7852f9a5dcb74d50ae14328d5d2d91c0, Reason: "target state loaded and unit not scheduled"}
+Nov 18 04:36:00 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-controller.service reason="unit scheduled here but not loaded"
+Nov 18 04:36:01 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-builder.service (1166b)
+Nov 18 04:36:01 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:36:01 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-builder.service reason="unit scheduled here but not loaded"
+Nov 18 04:36:06 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-publisher.service (776b)
+Nov 18 04:36:06 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:36:06 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-publisher.service reason="unit scheduled here but not loaded"
+Nov 18 04:36:08 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-router@1.service) to Machine(8215a5969c244c06b3e53f3881de6c49)
+Nov 18 04:36:08 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-router@1.service, MachineID: 8215a5969c244c06b3e53f3881de6c49, Reason: "target state  and unit not scheduled"}
+Nov 18 04:36:08 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-router@3.service) to Machine(99530c502c00484bb109cb686aafd03b)
+Nov 18 04:36:08 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-router@3.service, MachineID: 99530c502c00484bb109cb686aafd03b, Reason: "target state  and unit not scheduled"}
+Nov 18 04:36:09 deis-1 fleetd[949]: INFO engine.go:235: Scheduled Unit(deis-router@2.service) to Machine(7852f9a5dcb74d50ae14328d5d2d91c0)
+Nov 18 04:36:09 deis-1 fleetd[949]: INFO reconciler.go:147: EngineReconciler completed task: {Type: AttemptScheduleUnit, JobName: deis-router@2.service, MachineID: 7852f9a5dcb74d50ae14328d5d2d91c0, Reason: "target state  and unit not scheduled"}
+Nov 18 04:36:09 deis-1 fleetd[949]: INFO manager.go:218: Writing systemd unit deis-router@2.service (680b)
+Nov 18 04:36:09 deis-1 fleetd[949]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 04:36:09 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-router@2.service reason="unit scheduled here but not loaded"
+Nov 18 04:36:20 deis-1 fleetd[949]: INFO manager.go:78: Triggered systemd unit deis-store-monitor.service start: job=3967
+Nov 18 04:36:20 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-monitor.service reason="unit currently loaded but desired state is launched"
+Nov 18 04:50:37 deis-1 fleetd[949]: INFO manager.go:78: Triggered systemd unit deis-store-daemon.service start: job=5227
+Nov 18 04:50:37 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-daemon.service reason="unit currently loaded but desired state is launched"
+Nov 18 04:51:14 deis-1 fleetd[949]: INFO manager.go:78: Triggered systemd unit deis-store-metadata.service start: job=5313
+Nov 18 04:51:14 deis-1 fleetd[949]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-metadata.service reason="unit currently loaded but desired state is launched"
+Nov 18 04:51:16 deis-1 fleetd[949]: WARN engine.go:90:
+Nov 18 04:51:44 deis-1 fleetd[949]: ERROR engine.go:181: Engine leadership lost, renewal failed: timeout reached
+Nov 18 04:51:44 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: cancelled
+Nov 18 04:51:49 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:49 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/job}, retrying in 100ms
+Nov 18 04:51:49 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:49 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/job}, retrying in 200ms
+Nov 18 04:51:50 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:50 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/job}, retrying in 400ms
+Nov 18 04:51:50 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:50 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/job}, retrying in 800ms
+Nov 18 04:51:51 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:51 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/engine/version}, retrying in 100ms
+Nov 18 04:51:51 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:51 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/engine/version}, retrying in 200ms
+Nov 18 04:51:51 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:51 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/job}, retrying in 1s
+Nov 18 04:51:51 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:51 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/engine/version}, retrying in 400ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/engine/version}, retrying in 800ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: cancelled
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: cancelled
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: cancelled
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/state/deis-store-volume.service}, retrying in 100ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/state/deis-store-daemon.service}, retrying in 100ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: cancelled
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/state/deis-store-gateway.service}, retrying in 100ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/states/deis-store-monitor.service/7852f9a5dcb74d50ae14328d5d2d91c0}, retrying in 100ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: cancelled
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/state/deis-controller.service}, retrying in 100ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/state/deis-store-volume.service}, retrying in 200ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/state/deis-store-daemon.service}, retrying in 200ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/state/deis-store-gateway.service}, retrying in 200ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/state/deis-controller.service}, retrying in 200ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Set /_coreos.com/fleet/states/deis-store-monitor.service/7852f9a5dcb74d50ae14328d5d2d91c0}, retrying in 200ms
+Nov 18 04:51:52 deis-1 fleetd[949]: INFO client.go:278: Failed getting response from http://localhost:4001/: too many redirects
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR client.go:200: Unable to get result for {Get /_coreos.com/fleet/job}, retrying in 1s
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR reconcile.go:106: Failed fetching Units from Registry: timeout reached
+Nov 18 04:51:52 deis-1 fleetd[949]: ERROR reconcile.go:58: Unable to determine agent's desired state: timeout reached
+-- Reboot --
+Nov 18 05:05:19 deis-1 systemd[1]: Starting fleet daemon...
+Nov 18 05:05:19 deis-1 systemd[1]: Started fleet daemon.
+Nov 18 05:05:19 deis-1 fleetd[577]: INFO fleet.go:144: No provided or default config file found - proceeding without
+Nov 18 05:05:19 deis-1 fleetd[577]: INFO server.go:137: Establishing etcd connectivity
+Nov 18 05:05:19 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:19 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 100ms
+Nov 18 05:05:19 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:19 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 200ms
+Nov 18 05:05:19 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:19 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 400ms
+Nov 18 05:05:19 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:19 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 800ms
+Nov 18 05:05:20 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:20 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:21 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:21 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:22 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:22 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 100ms
+Nov 18 05:05:22 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:22 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 200ms
+Nov 18 05:05:22 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:22 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 400ms
+Nov 18 05:05:22 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:22 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 800ms
+Nov 18 05:05:23 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:23 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:24 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:24 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:26 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:26 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 100ms
+Nov 18 05:05:26 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:26 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 200ms
+Nov 18 05:05:26 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:26 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 400ms
+Nov 18 05:05:26 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:26 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 800ms
+Nov 18 05:05:27 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:27 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:28 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:28 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:29 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:29 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 100ms
+Nov 18 05:05:29 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:29 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 200ms
+Nov 18 05:05:29 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:29 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 400ms
+Nov 18 05:05:29 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:29 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 800ms
+Nov 18 05:05:30 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:30 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:31 deis-1 fleetd[577]: INFO client.go:278: Failed getting response from http://localhost:4001/: dial tcp 127.0.0.1:4001: connection refused
+Nov 18 05:05:31 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:34 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:34 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 100ms
+Nov 18 05:05:34 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:34 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 200ms
+Nov 18 05:05:34 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:34 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 400ms
+Nov 18 05:05:34 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:34 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 800ms
+Nov 18 05:05:35 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:35 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:36 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:36 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:37 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:37 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 100ms
+Nov 18 05:05:37 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:37 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 200ms
+Nov 18 05:05:37 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:37 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 400ms
+Nov 18 05:05:37 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:37 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 800ms
+Nov 18 05:05:38 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:38 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:39 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:39 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:44 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:44 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 100ms
+Nov 18 05:05:44 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:44 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 200ms
+Nov 18 05:05:44 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:44 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 400ms
+Nov 18 05:05:44 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:44 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 800ms
+Nov 18 05:05:45 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:45 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:46 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:46 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Update /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:47 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:47 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 100ms
+Nov 18 05:05:47 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:47 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 200ms
+Nov 18 05:05:47 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:47 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 400ms
+Nov 18 05:05:47 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:47 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 800ms
+Nov 18 05:05:48 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:48 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:49 deis-1 fleetd[577]: INFO client.go:284: Response 500 Internal Server Error from http://localhost:4001/ unusable
+Nov 18 05:05:49 deis-1 fleetd[577]: ERROR client.go:200: Unable to get result for {Create /_coreos.com/fleet/machines/7852f9a5dcb74d50ae14328d5d2d91c0/object}, retrying in 1s
+Nov 18 05:05:58 deis-1 fleetd[577]: INFO server.go:148: Starting server components
+Nov 18 05:05:58 deis-1 fleetd[577]: INFO manager.go:218: Writing systemd unit deis-store-monitor.service (1034b)
+Nov 18 05:05:58 deis-1 fleetd[577]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 05:05:58 deis-1 fleetd[577]: INFO manager.go:218: Writing systemd unit deis-store-volume.service (870b)
+Nov 18 05:05:58 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-store-monitor.service reason="unit scheduled here but not loaded"
+Nov 18 05:05:58 deis-1 fleetd[577]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 05:05:58 deis-1 fleetd[577]: INFO manager.go:218: Writing systemd unit deis-logspout.service (776b)
+Nov 18 05:05:58 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-store-volume.service reason="unit scheduled here but not loaded"
+Nov 18 05:05:58 deis-1 fleetd[577]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO manager.go:218: Writing systemd unit deis-publisher.service (776b)
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-logspout.service reason="unit scheduled here but not loaded"
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO manager.go:218: Writing systemd unit deis-store-daemon.service (943b)
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-publisher.service reason="unit scheduled here but not loaded"
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO manager.go:218: Writing systemd unit deis-store-metadata.service (683b)
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-store-daemon.service reason="unit scheduled here but not loaded"
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-store-metadata.service reason="unit scheduled here but not loaded"
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO manager.go:78: Triggered systemd unit deis-store-monitor.service start: job=2140
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-monitor.service reason="unit currently loaded but desired state is launched"
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO manager.go:78: Triggered systemd unit deis-store-metadata.service start: job=2218
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-metadata.service reason="unit currently loaded but desired state is launched"
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO manager.go:78: Triggered systemd unit deis-store-daemon.service start: job=2296
+Nov 18 05:05:59 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-daemon.service reason="unit currently loaded but desired state is launched"
+Nov 18 05:06:02 deis-1 fleetd[577]: INFO manager.go:218: Writing systemd unit deis-router@1.service (680b)
+Nov 18 05:06:02 deis-1 fleetd[577]: INFO manager.go:142: Instructing systemd to reload units
+Nov 18 05:06:02 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=LoadUnit job=deis-router@1.service reason="unit scheduled here but not loaded"
+Nov 18 05:06:27 deis-1 fleetd[577]: INFO manager.go:89: Triggered systemd unit deis-store-monitor.service stop: job=2862
+Nov 18 05:06:27 deis-1 fleetd[577]: INFO manager.go:89: Triggered systemd unit deis-store-daemon.service stop: job=2863
+Nov 18 05:06:27 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StopUnit job=deis-store-monitor.service reason="unit currently launched but desired state is loaded"
+Nov 18 05:06:27 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StopUnit job=deis-store-daemon.service reason="unit currently launched but desired state is loaded"
+Nov 18 05:06:27 deis-1 fleetd[577]: INFO manager.go:89: Triggered systemd unit deis-store-metadata.service stop: job=2864
+Nov 18 05:06:27 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StopUnit job=deis-store-metadata.service reason="unit currently launched but desired state is loaded"
+Nov 18 05:06:50 deis-1 fleetd[577]: INFO manager.go:78: Triggered systemd unit deis-store-monitor.service start: job=2945
+Nov 18 05:06:50 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-monitor.service reason="unit currently loaded but desired state is launched"
+Nov 18 05:06:54 deis-1 fleetd[577]: INFO manager.go:78: Triggered systemd unit deis-store-daemon.service start: job=3027
+Nov 18 05:06:54 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-daemon.service reason="unit currently loaded but desired state is launched"
+Nov 18 05:07:08 deis-1 fleetd[577]: INFO manager.go:78: Triggered systemd unit deis-store-metadata.service start: job=3109
+Nov 18 05:07:08 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-metadata.service reason="unit currently loaded but desired state is launched"
+Nov 18 05:07:12 deis-1 fleetd[577]: INFO manager.go:78: Triggered systemd unit deis-store-volume.service start: job=3191
+Nov 18 05:07:12 deis-1 fleetd[577]: INFO reconcile.go:274: AgentReconciler completed task: type=StartUnit job=deis-store-volume.service reason="unit currently loaded but desired state is launched"

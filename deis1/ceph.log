@@ -1,0 +1,23 @@
+$ nse deis-store-monitor
+root@deis-1:/# ceph osd tree
+libust[225/225]: Warning: HOME environment variable not set. Disabling LTTng-UST per-user tracing. (in setup_local_apps() at lttng-ust-comm.c:305)
+# id    weight  type name   up/down reweight
+-1  3   root default
+-2  1       host deis-2
+0   1           osd.0   up  1
+-3  1       host deis-3
+1   1           osd.1   up  1
+-4  1       host deis-1
+2   1           osd.2   up  1
+root@deis-1:/# ceph -s
+libust[259/259]: Warning: HOME environment variable not set. Disabling LTTng-UST per-user tracing. (in setup_local_apps() at lttng-ust-comm.c:305)
+    cluster 297e412d-3fa8-42f2-940c-e79d252fc125
+     health HEALTH_WARN 28 pgs degraded; 72 pgs peering; 28 pgs stale; 28 pgs stuck degraded; 356 pgs stuck inactive; 28 pgs stuck stale; 384 pgs stuck unclean; 28 pgs stuck undersized; 28 pgs undersized; 19 requests are blocked > 32 sec; pool rbd pg_num 128 > pgp_num 64; clock skew detected on mon.deis-2, mon.deis-3
+     monmap e3: 3 mons at {deis-1=172.17.8.100:6789/0,deis-2=172.17.8.101:6789/0,deis-3=172.17.8.102:6789/0}, election epoch 18, quorum 0,1,2 deis-1,deis-2,deis-3
+     mdsmap e7: 1/1/1 up {0=deis-1=up:creating}, 2 up:standby
+     osdmap e28: 3 osds: 3 up, 3 in
+      pgmap v50: 384 pgs, 3 pools, 0 bytes data, 0 objects
+            11146 MB used, 21557 MB / 33052 MB avail
+                 284 creating
+                  72 peering
+                  28 stale+active+undersized+degraded

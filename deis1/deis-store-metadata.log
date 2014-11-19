@@ -1,0 +1,50 @@
+Nov 18 04:51:14 deis-1 systemd[1]: Starting deis-store-metadata...
+Nov 18 04:51:17 deis-1 sh[1956]: Pulling repository deis/store-metadata
+Nov 18 04:51:47 deis-1 sh[1956]: Status: Downloaded newer image for deis/store-metadata:v1.0.1
+Nov 18 04:51:47 deis-1 systemd[1]: Started deis-store-metadata.
+Nov 18 04:51:50 deis-1 sh[2148]: store-metadata: The Ceph filesystem hasn't been created. Trying to obtain the lock to set up...
+Nov 18 04:51:51 deis-1 sh[2148]: Error:  100: Key not found (/deis/store/filesystemSetupLock) [4937]
+Nov 18 04:51:51 deis-1 sh[2148]: store-metadata: waiting for another metadata to complete setup...
+Nov 18 04:51:56 deis-1 sh[2148]: store-metadata: waiting for another metadata to complete setup...
+-- Reboot --
+Nov 18 05:05:59 deis-1 systemd[1]: Starting deis-store-metadata...
+Nov 18 05:06:02 deis-1 systemd[1]: Started deis-store-metadata.
+Nov 18 05:06:02 deis-1 sh[1021]: deis-store-metadata
+Nov 18 05:06:04 deis-1 sh[1067]: store-metadata: The Ceph filesystem hasn't been created. Trying to obtain the lock to set up...
+Nov 18 05:06:04 deis-1 sh[1067]: store-metadata: waiting for another metadata to complete setup...
+Nov 18 05:06:09 deis-1 sh[1067]: store-metadata: waiting for another metadata to complete setup...
+Nov 18 05:06:14 deis-1 sh[1067]: store-metadata: waiting for another metadata to complete setup...
+Nov 18 05:06:20 deis-1 sh[1067]: store-metadata: running...
+Nov 18 05:06:20 deis-1 sh[1067]: starting mds.deis-1 at :/0
+Nov 18 05:06:20 deis-1 sh[1067]: 2014-11-18 05:06:20.483128 7f2546d47800  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-mds, pid 1
+Nov 18 05:06:21 deis-1 sh[1067]: 2014-11-18 05:06:21.399245 7f2541133700  1 mds.-1.0 handle_mds_map standby
+Nov 18 05:06:22 deis-1 sh[1067]: 2014-11-18 05:06:22.884773 7f253c028700  0 auth: do not have service osd, i am mds
+Nov 18 05:06:22 deis-1 sh[1067]: 2014-11-18 05:06:22.884857 7f253c028700  0 cephx: verify_authorizer could not get service secret for service osd secret_id=2
+Nov 18 05:06:22 deis-1 sh[1067]: 2014-11-18 05:06:22.884913 7f253c028700  0 -- 172.17.8.100:6800/1 >> 172.17.8.101:6800/1 pipe(0x3487080 sd=16 :6800 s=0 pgs=0 cs=0 l=0 c=0x3478260).accept: got bad authorizer
+Nov 18 05:06:27 deis-1 systemd[1]: Stopping deis-store-metadata...
+Nov 18 05:06:27 deis-1 sh[1067]: 2014-11-18 05:06:27.847802 7f2541133700  0 monclient: hunting for new mon
+Nov 18 05:06:28 deis-1 systemd[1]: Stopped deis-store-metadata.
+Nov 18 05:06:28 deis-1 docker[1730]: deis-store-metadata
+Nov 18 05:06:28 deis-1 sh[1067]: 2014-11-18 05:06:27.973299 7f253c829700 -1 mds.-1.0 *** got signal Terminated ***
+Nov 18 05:06:28 deis-1 sh[1067]: 2014-11-18 05:06:27.973350 7f253c829700  1 mds.-1.0 suicide.  wanted down:dne, now up:standby
+Nov 18 05:07:08 deis-1 systemd[1]: Starting deis-store-metadata...
+Nov 18 05:07:08 deis-1 systemd[1]: Started deis-store-metadata.
+Nov 18 05:07:10 deis-1 sh[2140]: store-metadata: running...
+Nov 18 05:07:10 deis-1 sh[2140]: starting mds.deis-1 at :/0
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.275024 7ffb06484800  0 ceph version 0.87 (c51c8f9d80fa4e0168aa52685b8de40e42758578), process ceph-mds, pid 1
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.653713 7ffb00870700  1 mds.-1.0 handle_mds_map standby
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.670735 7ffb00870700  1 mds.0.2 handle_mds_map i am now mds.0.2
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.670774 7ffb00870700  1 mds.0.2 handle_mds_map state change up:standby --> up:creating
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.671229 7ffb00870700  0 mds.0.cache creating system inode with ino:1
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.671818 7ffb00870700  0 mds.0.cache creating system inode with ino:100
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.671854 7ffb00870700  0 mds.0.cache creating system inode with ino:600
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.672047 7ffb00870700  0 mds.0.cache creating system inode with ino:601
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.672620 7ffb00870700  0 mds.0.cache creating system inode with ino:602
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.673669 7ffb00870700  0 mds.0.cache creating system inode with ino:603
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.674354 7ffb00870700  0 mds.0.cache creating system inode with ino:604
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.675074 7ffb00870700  0 mds.0.cache creating system inode with ino:605
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.678101 7ffb00870700  0 mds.0.cache creating system inode with ino:606
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.681892 7ffb00870700  0 mds.0.cache creating system inode with ino:607
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.682866 7ffb00870700  0 mds.0.cache creating system inode with ino:608
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.683358 7ffb00870700  0 mds.0.cache creating system inode with ino:609
+Nov 18 05:07:10 deis-1 sh[2140]: 2014-11-18 05:07:10.696298 7ffb00870700  0 mds.0.cache creating system inode with ino:200
